@@ -1,0 +1,51 @@
+{
+  "options": {
+    "itemsPerPage": 5,
+    "rowClickable": false
+  },
+  "data": {
+    "fieldMapping": [
+      {
+        "reportId": "taf_top_shortest_user_agents",
+        "columns": [
+          {
+            "data": [
+              {
+                "fieldName": "data.http.userAgent"
+              }
+            ],
+            "style": {
+              "width": "50%",
+              "wordBreak": "break-all"
+            },
+            "type": "text",
+            "header": "SHORTEST USER AGENT"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "count"
+              }
+            ],
+            "chart": {
+              "width": "100%",
+              "height": "120",
+              "type": "area2d",
+              "id": "bandwidth",
+              "options": {
+                "labelFontSize": "9"
+              }
+            },
+            "style": {
+              "width": "50%"
+            },
+            "type": "chart",
+            "header": "# CONNECTIONS"
+          }
+        ]
+      }
+    ],
+    "nestedResult": true,
+    "emptyValueMessage": "(Empty)"
+  }
+}

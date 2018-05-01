@@ -1,0 +1,11 @@
+{
+  "name": "yoichi",
+  "description": "RANK Protect's User Interface",
+  "version": "0.1.0",
+  "homepage": "https://gitlab.ranksoftwareinc.com/rank/yoichi",
+  "private": true,
+  "dependencies": {
+    "fusioncharts": "3.11.2",
+    "flag-icon-css" : "0.8.2"
+  }
+}

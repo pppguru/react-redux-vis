@@ -1,0 +1,439 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": null
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "backgroundColor": "transparent"
+          }
+        },
+        "id": "metricsBar",
+        "type": "MetricsBar",
+        "childrenComponent": [
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_alert_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "1",
+            "type": "MetricsCard",
+            "title": "High Priority Anomalies",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_malware_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "2",
+            "type": "MetricsCard",
+            "title": "High Priority Malware",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "malware",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_event_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_event_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "3",
+            "type": "MetricsCard",
+            "title": "Events Processed"
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_asset_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_asset_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Assets Monitored"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "4",
+            "type": "MetricsCard",
+            "title": "Assets Monitored"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "showSearch": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_alert_highpriority"
+            },
+            "queryParams": {
+              "count": 200,
+              "window": ""
+            }
+          },
+          "title": "Recent Anomalies"
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "marginLeft": "30px"
+          },
+          "id": "RecentAnomalies"
+        },
+        "id": "RecentAnomalies",
+        "type": "Reactable",
+        "openAlertDetails": true
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_top_at_risk_assets"
+            },
+            "queryParams": {
+              "count": 200,
+              "window": ""
+            }
+          },
+          "title": "High Risk Assets"
+        },
+        "attributes": {
+          "style": {
+            "width": "290px",
+            "flex": "0 0 290px",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "high-risk-assets"
+        },
+        "id": "high-risk-assets",
+        "type": "Reactable",
+        "openAssetDetails": true
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "ANOMALY TYPES",
+            "pYAxisname": "ANOMALY COUNT",
+            "paletteColors": "#03c5ed"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_threat_trend",
+                "columns": [
+                  "data.rank_alert.category"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_threat_trend",
+                "columns": [
+                  "date"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "showSearch": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_threat_trend"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Anomalies by Type"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "AlertByType"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.rank_alert.category": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          },
+          "secondaryClick": {
+            "page": "alert",
+            "pathParams": {
+              "id": "id:fieldName",
+              "date": "date:fieldName"
+            }
+          }
+        },
+        "id": "alert-by-type",
+        "type": "charts/ParetoChart"
+      },
+      {
+        "chartOptions": {
+          "linealpha": "0",
+          "paletteColors": "#feb821,#f37133,#e72b44",
+          "yAxisName": "ANOMALY COUNT",
+          "drawAnchors": "1",
+          "legendPosition": "right"
+        },
+        "chartData": {
+          "fieldMapping": [
+            {
+              "reportId": "taf_alert_priority_time",
+              "columns": [
+                "date"
+              ],
+              "axis": "x"
+            },
+            {
+              "reportId": "taf_alert_priority_time",
+              "columns": [
+                "data.rank_alert.score",
+                "count"
+              ],
+              "seriesOptions": {
+                "drawanchors": "1",
+                "lineThickness": "0",
+                "anchorradius": "5",
+                "renderas": "Line",
+                "anchorbgcolor": [
+                  "#feb821",
+                  "#f37133",
+                  "#e72b44"
+                ],
+                "anchorBorderColor": [
+                  "#feb821",
+                  "#f37133",
+                  "#e72b44"
+                ],
+                "anchorsides": [
+                  "0",
+                  "0",
+                  "0"
+                ]
+              },
+              "axis": "y"
+            }
+          ],
+          "combinedResult": false
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_alert_priority_time"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Anomaly Priority"
+        },
+        "attributes": {
+          "chartWidth": "100%",
+          "chartCaption": {
+            "display": "none"
+          },
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "AlertPriorityChart",
+          "chartHeight": "350"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "date": {
+                "toolTextIndex": 1,
+                "value": ""
+              },
+              "data.rank_alert.score": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          },
+          "secondaryClick": {
+            "page": "alert",
+            "pathParams": {
+              "id": "id:fieldName",
+              "date": "date:fieldName"
+            }
+          }
+        },
+        "id": "alert-priority-chart",
+        "type": "charts/MultiSeriesCombiChart"
+      }
+    ]
+  ]
+}

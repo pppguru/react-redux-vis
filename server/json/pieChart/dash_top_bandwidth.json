@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "api": {
+      "reportId": "taf_total_usage,taf_top_talkers_bandwidth,taf_asset_count_time_shifted"
+    }
+  },
+  "chart": {
+    "options": {},
+    "data": {
+      "fieldMapping": [
+        {
+          "reportId": "taf_asset_count_time_shifted",
+          "columns": [
+            {
+              "name": "0.0",
+              "type": "index"
+            }
+          ],
+          "returnValueIs": "countValue"
+        },
+        {
+          "reportId": "taf_total_usage",
+          "columns": [
+            {
+              "name": "bandwidth",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "totalValue"
+        },
+        {
+          "reportId": "taf_top_talkers_bandwidth",
+          "columns": [
+            {
+              "name": "bandwidth",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "topValue"
+        }
+      ]
+    },
+    "legends": {
+      "title": [
+        "Bandwidth",
+        "Assets"
+      ],
+      "label": "Used by"
+    }
+  }
+}

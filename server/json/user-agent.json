@@ -1,0 +1,331 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": null
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "backgroundColor": "transparent"
+          }
+        },
+        "id": "metricsBar",
+        "type": "MetricsBar",
+        "childrenComponent": [
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_alert_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "marginRight": "1px",
+                "width": "25%",
+                "borderTop": "5px solid #f37133"
+              }
+            },
+            "id": "1",
+            "type": "MetricsCard",
+            "title": "High Priority Anomalies",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_malware_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "marginRight": "1px",
+                "width": "25%",
+                "borderTop": "5px solid #f37133"
+              }
+            },
+            "id": "2",
+            "type": "MetricsCard",
+            "title": "High Priority Malware",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "malware",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_event_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "marginRight": "1px",
+                "width": "25%",
+                "borderTop": "5px solid #2BC6D6"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_event_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "3",
+            "type": "MetricsCard",
+            "title": "Events Processed"
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_asset_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "marginRight": "1px",
+                "width": "25%",
+                "borderTop": "5px solid #2BC6D6"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_asset_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Assets Monitored"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "4",
+            "type": "MetricsCard",
+            "title": "Assets Monitored"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chart": {
+          "width": "100%",
+          "height": "300",
+          "options": {
+            "yAxisName": "CONNECTION COUNT",
+            "xAxisName": "USER AGENT LENGTH"
+          }
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_user_agent_unique_with_name"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "User Agent Details"
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "UserAgentLength"
+        },
+        "id": "user-agent-length",
+        "type": "charts/ScatterChart"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_top_longest_user_agents"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Longest User Agents"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "100%"
+          },
+          "id": "longest-user-agents"
+        },
+        "id": "LongestUserAgents",
+        "type": "List",
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.http.userAgent": {
+                "key": ["columns", "0", "data", "0", "value"],
+                "value": ""
+              }
+            }
+          }
+        }
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_top_shortest_user_agents"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Shortest User Agents"
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "marginRight": "30px"
+          },
+          "id": "shortest-user-agents"
+        },
+        "id": "ShortestUserAgents",
+        "type": "List",
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.http.userAgent": {
+                "key": [
+                  "columns",
+                  "0",
+                  "data",
+                  "0",
+                  "value"
+                ],
+                "value": ""
+              }
+            }
+          }
+        }
+      }
+    ]
+  ]
+}

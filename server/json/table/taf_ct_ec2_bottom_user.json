@@ -1,0 +1,58 @@
+{
+  "options": {
+    "itemsPerPage": 5,
+    "rowClickable": true
+  },
+  "data": {
+    "fieldMapping": [
+      {
+        "reportId": "taf_ct_ec2_bottom_user",
+        "columns": [
+          {
+            "data": [
+              {
+                "fieldName": "data.aws.userArn"
+              }
+            ],
+            "style": {
+              "width": "50%",
+              "wordBreak": "break-all"
+            },
+            "type": "text",
+            "header": "User"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "type"
+              }
+            ],
+            "chart": {
+              "width": "100%",
+              "type": "area2d",
+              "id": "bottom-user",
+              "height": "90",
+              "options": {
+                "labelFontSize": "9"
+              }
+            },
+            "style": {
+              "width": "50%"
+            },
+            "type": "chart",
+            "header": "# Events"
+          }
+        ]
+      }
+    ],
+    "nestedResult": true,
+    "emptyValueMessage": "(Empty)"
+  },
+  "details": {
+    "meta":{
+      "queryParams": {
+        "data.aws.userArn": "data.aws.userArn:fieldName"
+      }
+    }
+  }
+}

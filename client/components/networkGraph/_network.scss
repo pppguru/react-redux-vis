@@ -1,0 +1,63 @@
+@import '../../styles/color';
+@import '../../styles/variable';
+
+.vis-tooltip {
+  position: absolute;
+  visibility: hidden;
+  padding: 5px;
+  white-space: nowrap;
+
+  font-family: $DefaultFont;
+  font-size: 14px;
+  color: #24293D;
+  background-color: $CloudColor;
+  border: 0px;
+  pointer-events: none;
+}
+
+.vis-zoomIn {
+  background-image: url("../../static/img/plus.png");
+  bottom: 30px;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.vis-zoomOut {
+  background-image: url("../../static/img/minus.png");
+  bottom: 0px;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.vis-zoomExtends {
+  background-image: url("../../static/img/zoomExtends.png");
+  bottom: 60px;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.vis-undo {
+  background-image: url("../../static/img/undo.png");
+  bottom: 90px;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.vis-reset {
+  background-image: url("../../static/img/reset.png");
+  bottom: 120px;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+#network-graph > div {
+  height: 100%;
+}

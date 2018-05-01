@@ -1,0 +1,1037 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": null
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "backgroundColor": "transparent"
+          }
+        },
+        "id": "metricsBar",
+        "type": "MetricsBar",
+        "childrenComponent": [
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_alert_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "1",
+            "type": "MetricsCard",
+            "title": "High Priority Anomalies",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_malware_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "2",
+            "type": "MetricsCard",
+            "title": "High Priority Malware",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "malware",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_s3_count_event"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_s3_count_event"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "3",
+            "type": "MetricsCard",
+            "title": "S3 Events Processed"
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_s3_count_failed_event"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_s3_count_failed_event"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Assets Monitored"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "4",
+            "type": "MetricsCard",
+            "title": "Failed S3 Events"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_s3_most_accessed"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Most Accessed Files"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "most-access"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "mostaccess",
+        "type": "List"
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_s3_least_accessed"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Least Accessed Files"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "least-access"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "leastaccess",
+        "type": "List"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "TIME",
+            "yAxisname": "COUNT"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_s3_file_download",
+                "columns": [
+                  "date"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_s3_file_download",
+                "columns": [
+                  "type"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350",
+          "type": "area2d"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_s3_file_download"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "File Download By Time"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "loginFailureByTime"
+        },
+        "id": "login-failure-by-time",
+        "type": "charts/StandardChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "TIME",
+            "yAxisname": "COUNT"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_s3_file_upload",
+                "columns": [
+                  "date"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_s3_file_upload",
+                "columns": [
+                  "type"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350",
+          "type": "area2d"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_s3_file_upload"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "File Upload By Time"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "upload"
+        },
+        "id": "uploadgraph",
+        "type": "charts/StandardChart"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "dash_most_active_users"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Most Active Users"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "piereq"
+        },
+        "id": "pie-req",
+        "type": "charts/PieChart"
+      },
+      {
+        "chartOptions": {
+          "showValues": "1",
+          "showLabels": "1",
+          "paletteColors": "#03C5ED",
+          "showCumulativeLine": "0"
+        },
+        "chartData": {
+          "showTrendLines": false,
+          "fieldMapping": [
+            {
+              "reportId": "taf_s3_most_active_requester",
+              "columns": [
+                "data.aws.userArn",
+                "date"
+              ]
+            }
+          ]
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_s3_most_active_requester"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Active Users"
+        },
+        "attributes": {
+          "chartWidth": "100%",
+          "chartHeight": "350",
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "chartOptions": {
+            "labelFontSize": "9"
+          },
+          "id": "freqreq"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.s3.requester": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "freq-req",
+        "type": "charts/HorizontalBarChart"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "dash_most_active_user_agents"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Most Active User Agents"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "pieua"
+        },
+        "id": "pie-ua",
+        "type": "charts/PieChart"
+      },
+      {
+        "chartOptions": {
+          "showValues": "1",
+          "showLabels": "1",
+          "paletteColors": "#03C5ED",
+          "showCumulativeLine": "0"
+        },
+        "chartData": {
+          "showTrendLines": false,
+          "fieldMapping": [
+            {
+              "reportId": "taf_s3_most_frequent_useragent",
+              "columns": [
+                "data.aws.userAgent",
+                "date"
+              ]
+            }
+          ]
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_s3_most_frequent_useragent"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Active User Agents"
+        },
+        "attributes": {
+          "chartWidth": "100%",
+          "chartHeight": "350",
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "chartOptions": {
+            "labelFontSize": "9"
+          },
+          "id": "frequa"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.s3.userAgent": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "freq-ua",
+        "type": "charts/HorizontalBarChart"
+      }
+    ],
+    [
+      {
+        "details": {
+          "itemsPerPage": 7,
+          "meta": {
+            "reportId": "taf_s3_top_country_download",
+            "queryParams": {
+              "source.country": {
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "title": "Download Map",
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_s3_top_country_download,taf_s3_bad_rep_download"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          }
+        },
+        "id": "download-threat-map",
+        "type": "ThreatMap",
+        "chart": {
+          "worldMap": {
+            "meta": {
+              "subTitle": "NUMBER OF FILE DOWNLOADS BY COUNTRY"
+            },
+            "attributes": {
+              "style": {
+                "marginRight": "30px",
+                "width": "70%"
+              },
+              "legendStyle": {
+                "width": "10%",
+                "marginLeft": "-10%"
+              },
+              "id": "download-world-map"
+            },
+            "chart": {
+              "options": {},
+              "data": {
+                "fieldMapping": [
+                  {
+                    "reportId": "taf_s3_bad_rep_download",
+                    "columns": {
+                      "country": "destination.country",
+                      "x": "pos_x",
+                      "y": "pos_y",
+                      "connections": "connections"
+                    },
+                    "connection": "malicious"
+                  },
+                  {
+                    "reportId": "taf_s3_top_country_download",
+                    "columns": {
+                      "country": "source.country",
+                      "x": "pos_x",
+                      "y": "pos_y",
+                      "connections": "connections"
+                    },
+                    "connection": "secure"
+                  }
+                ]
+              },
+              "width": "100%",
+              "height": "450"
+            }
+          },
+          "legend1": {
+            "chart": {
+              "style": {
+                "paddingTop": "15px"
+              }
+            },
+            "chartOptions": {},
+            "chartData": {
+              "displayTopFive": true,
+              "showTrendLines": false,
+              "fieldMapping": [
+                {
+                  "reportId": "taf_s3_bad_rep_download",
+                  "columns": [
+                    "country_name",
+                    "connections"
+                  ],
+                  "connection": "malicious"
+                },
+                {
+                  "reportId": "taf_s3_top_country_download",
+                  "columns": [
+                    "country_name",
+                    "connections"
+                  ],
+                  "connection": "secure"
+                }
+              ],
+              "multipleReportIds": false
+            },
+            "meta": {
+              "showHeader": false,
+              "title": "TOP 5",
+              "parentWrap": false
+            },
+            "attributes": {
+              "chartCaption": {
+                "position": "absolute"
+              },
+              "chartWidth": "100%",
+              "style": {
+                "paddingTop": "15px"
+              },
+              "id": "download-top-countries",
+              "chartHeight": "200"
+            }
+          },
+          "legend2": {
+            "chart": {
+              "style": {
+                "paddingTop": "15px"
+              }
+            },
+            "chartOptions": {},
+            "chartData": {
+              "displayTopFive": true,
+              "showTrendLines": false,
+              "fieldMapping": [
+                {
+                  "reportId": "taf_s3_bad_rep_download",
+                  "columns": [
+                    "country_name",
+                    "connections"
+                  ],
+                  "connection": "malicious"
+                },
+                {
+                  "reportId": "taf_s3_top_country_download",
+                  "columns": [
+                    "country_name",
+                    "connections"
+                  ],
+                  "connection": "secure"
+                }
+              ],
+              "multipleReportIds": false
+            },
+            "meta": {
+              "subTitle": "(in bytes)",
+              "showHeader": false,
+              "title": "TOP 5",
+              "parentWrap": false
+            },
+            "attributes": {
+              "chartCaption": {
+                "position": "absolute"
+              },
+              "chartWidth": "100%",
+              "style": {
+                "paddingTop": "15px"
+              },
+              "id": "download-top-bandwidth",
+              "chartHeight": "200"
+            }
+          }
+        }
+      }
+    ],
+    [
+      {
+        "details": {
+          "itemsPerPage": 7,
+          "meta": {
+            "reportId": "taf_s3_top_country_upload",
+            "queryParams": {
+              "source.country": {
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "title": "Upload Map",
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_s3_top_country_upload,taf_s3_bad_rep_upload"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          }
+        },
+        "id": "upload-threat-map",
+        "type": "ThreatMap",
+        "chart": {
+          "worldMap": {
+            "meta": {
+              "subTitle": "NUMBER OF FILE UPLOADS BY COUNTRY"
+            },
+            "attributes": {
+              "style": {
+                "marginRight": "30px",
+                "width": "70%"
+              },
+              "legendStyle": {
+                "width": "10%",
+                "marginLeft": "-10%"
+              },
+              "id": "upload-world-map"
+            },
+            "chart": {
+              "options": {},
+              "data": {
+                "fieldMapping": [
+                  {
+                    "reportId": "taf_s3_bad_rep_upload",
+                    "columns": {
+                      "country": "destination.country",
+                      "x": "pos_x",
+                      "y": "pos_y",
+                      "connections": "connections"
+                    },
+                    "connection": "malicious"
+                  },
+                  {
+                    "reportId": "taf_s3_top_country_upload",
+                    "columns": {
+                      "country": "source.country",
+                      "x": "pos_x",
+                      "y": "pos_y",
+                      "connections": "connections"
+                    },
+                    "connection": "secure"
+                  }
+                ]
+              },
+              "width": "100%",
+              "height": "450"
+            }
+          },
+          "legend1": {
+            "chart": {
+              "style": {
+                "paddingTop": "15px"
+              }
+            },
+            "chartOptions": {},
+            "chartData": {
+              "displayTopFive": true,
+              "showTrendLines": false,
+              "fieldMapping": [
+                {
+                  "reportId": "taf_s3_bad_rep_upload",
+                  "columns": [
+                    "country_name",
+                    "connections"
+                  ],
+                  "connection": "malicious"
+                },
+                {
+                  "reportId": "taf_s3_top_country_upload",
+                  "columns": [
+                    "country_name",
+                    "connections"
+                  ],
+                  "connection": "secure"
+                }
+              ],
+              "multipleReportIds": false
+            },
+            "meta": {
+              "showHeader": false,
+              "title": "TOP 5",
+              "parentWrap": false
+            },
+            "attributes": {
+              "chartCaption": {
+                "position": "absolute"
+              },
+              "chartWidth": "100%",
+              "style": {
+                "paddingTop": "15px"
+              },
+              "id": "upload-top-countries",
+              "chartHeight": "200"
+            }
+          },
+          "legend2": {
+            "chart": {
+              "style": {
+                "paddingTop": "15px"
+              }
+            },
+            "chartOptions": {},
+            "chartData": {
+              "displayTopFive": true,
+              "showTrendLines": false,
+              "fieldMapping": [
+                {
+                  "reportId": "taf_s3_bad_rep_upload",
+                  "columns": [
+                    "country_name",
+                    "connections"
+                  ],
+                  "connection": "malicious"
+                },
+                {
+                  "reportId": "taf_s3_top_country_upload",
+                  "columns": [
+                    "country_name",
+                    "connections"
+                  ],
+                  "connection": "secure"
+                }
+              ],
+              "multipleReportIds": false
+            },
+            "meta": {
+              "subTitle": "(in bytes)",
+              "showHeader": false,
+              "title": "TOP 5",
+              "parentWrap": false
+            },
+            "attributes": {
+              "chartCaption": {
+                "position": "absolute"
+              },
+              "chartWidth": "100%",
+              "style": {
+                "paddingTop": "15px"
+              },
+              "id": "upload-top-bandwidth",
+              "chartHeight": "200"
+            }
+          }
+        }
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "TIME",
+            "yAxisname": "USER",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_s3_least_active_requester",
+                "columns": [
+                  "data.aws.userArn"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_s3_least_active_requester",
+                "columns": [
+                  "type"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_s3_least_active_requester"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Least Active User"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "lfreqreq"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.s3.requester": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "l-freq-req",
+        "type": "charts/ParetoChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "TIME",
+            "yAxisname": "USER",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_s3_least_frequent_useragent",
+                "columns": [
+                  "data.aws.userAgent"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_s3_least_frequent_useragent",
+                "columns": [
+                  "date"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_s3_least_frequent_useragent"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Least Active User Agent"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "lfrequa"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.s3.userAgent": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "l-freq-ua",
+        "type": "charts/ParetoChart"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": null
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "backgroundColor": "transparent"
+          }
+        },
+        "id": "metricsBar",
+        "type": "MetricsBar",
+        "childrenComponent": [
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_alert_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "1",
+            "type": "MetricsCard",
+            "title": "High Priority Anomalies",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_malware_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "2",
+            "type": "MetricsCard",
+            "title": "High Priority Malware",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "malware",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_core_processes_wrong_user_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_core_processes_wrong_user_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "3",
+            "type": "MetricsCard",
+            "title": "Abnormal Process Users"
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_core_processes_path_anomalies_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_core_processes_path_anomalies_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Assets Monitored"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "4",
+            "type": "MetricsCard",
+            "title": "Abnormal Process Launch"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_most_launched_processes"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Most Launched Processes"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "most-launched"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "mostlaunched",
+        "type": "List"
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_least_launched_processes"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Least Launched Processes"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "least-launched"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "leastlaunched",
+        "type": "List"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "dash_most_active_processes"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Most Active Processes"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "piereq"
+        },
+        "id": "pie-req",
+        "type": "charts/PieChart"
+      },
+      {
+        "chartOptions": {
+          "showValues": "1",
+          "showLabels": "1",
+          "paletteColors": "#03c5ed",
+          "showCumulativeLine": "0"
+        },
+        "chartData": {
+          "showTrendLines": false,
+          "fieldMapping": [
+            {
+              "reportId": "taf_processes_with_most_network_conn",
+              "columns": [
+                "data.sysmon.Image",
+                "count"
+              ]
+            }
+          ]
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_processes_with_most_network_conn"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Active Process"
+        },
+        "attributes": {
+          "chartWidth": "100%",
+          "chartHeight": "350",
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "chartOptions": {
+            "labelFontSize": "9"
+          },
+          "id": "freqreq"
+        },
+        "details": {
+          "meta": {
+            "queryParams": {
+              "data.sysmon.Image": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "freq-req",
+        "type": "charts/HorizontalBarChart"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_most_used_parent_processes"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Most Used Parent Processes"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "most-used-parent"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "mostusedparent",
+        "type": "List"
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_least_used_parent_processes"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Least Used Parent Processes"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "least-used-parent"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "leastusedparent",
+        "type": "List"
+      }
+    ],
+    [
+      {
+        "chartOptions": {
+          "showValues": "1",
+          "showLabels": "1",
+          "paletteColors": "#03c5ed",
+          "showCumulativeLine": "0"
+        },
+        "chartData": {
+          "showTrendLines": false,
+          "fieldMapping": [
+            {
+              "reportId": "taf_sysmon_most_used_protocols",
+              "columns": [
+                "protocol.service",
+                "count"
+              ]
+            }
+          ]
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_sysmon_most_used_protocols"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Most Used Protocols"
+        },
+        "attributes": {
+          "chartWidth": "100%",
+          "chartHeight": "350",
+          "style": {
+            "width": "100%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "chartOptions": {
+            "labelFontSize": "9"
+          },
+          "id": "freqprotocols"
+        },
+        "details": {
+          "meta": {
+            "queryParams": {
+              "protocol.service": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "freq-protocols",
+        "type": "charts/HorizontalBarChart"
+      }
+    ]
+   ]
+}

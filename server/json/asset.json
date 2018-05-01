@@ -1,0 +1,318 @@
+{
+  "layout": [
+    [
+      {
+        "id": "asset-detail",
+        "type": "AssetDetails",
+        "meta": {
+          "showHeader": true,
+          "showRefresh": false,
+          "showBackButton": true,
+          "showFullScreen": false,
+          "api": [
+            {
+              "path": "/api/entity/{type}/{assetId}",
+              "pathParams": {
+                "assetId": ":pathParam",
+                "type": ":pathParam"
+              },
+              "queryParams": {},
+              "id": "assetDetail"
+            },
+            {
+              "path": "/api/analytics/reporting/execute/{reportId}",
+              "pathParams": {
+                "reportId": "taf_asset_session_count_time_shifted,taf_asset_internal_resource_count_time_shifted,taf_asset_total_incoming_bandwidth_external_time_shifted,taf_asset_total_incoming_bandwidth_internal_time_shifted,taf_asset_total_outgoing_bandwidth_external_time_shifted,taf_asset_total_outgoing_bandwidth_internal_time_shifted,taf_asset_top_dest_countries,taf_asset_top_source_countries,taf_asset_top_dest_countries"
+              },
+              "queryParams": {
+                "type:pathParam": "assetId:pathParam",
+                "window": ""
+              },
+              "id": "assetReports"
+            },
+            {
+              "path": "/api/session/activity/live/{type}/{assetId}",
+              "pathParams": {
+                "assetId": ":pathParam",
+                "type": ":pathParam"
+              },
+              "queryParams": {
+                "window": "",
+                "offset": ":customParam"
+              },
+              "id": "sessionDetail"
+            }
+          ],
+          "title": "Risk Profile"
+        },
+        "attributes": {
+          "style": {
+            "width": "300px",
+            "marginTop": "30px",
+            "marginLeft": "30px",
+            "flex": "0 0 300px"
+          }
+        },
+        "chart": {
+          "radarChartOptions": {
+            "labelFontSize": "9",
+            "bgColor": "#cbcbd1",
+            "radarfillalpha": "100",
+            "radarfillcolor": "#ffffff",
+            "labelPadding": "3",
+            "chartLeftMargin": "0",
+            "chartRightMargin": "0",
+            "chartBottomMargin": "0",
+            "canvasBottomMargin": "0",
+            "canvasRightMargin": "0",
+            "canvasLeftMargin": "0",
+            "canvasTopMargin": "0",
+            "showLimits": "0",
+            "showDivLineValues": "0",
+            "paletteColors": "#03C5ED"
+          },
+          "sessionChartOptions": {
+            "labelDisplay": "rotate",
+            "labelFontSize": "10",
+            "labelPadding": "3",
+            "showLimits": "0",
+            "showDivLineValues": "0",
+            "paletteColors": "#03C5ED",
+            "yAxisValuesStep": 3,
+            "toolTipBorderThickness": "1",
+            "toolTipBgAlpha": "100",
+            "toolTipBorderRadius": "2",
+            "showplotborder": 1,
+            "plotBorderColor": "#cbcbd1",
+            "plotBorderAlpha": 60
+          }
+        }
+      },
+      {
+        "id": "network-graph",
+        "type": "networkGraph/index",
+        "meta": {
+          "showHeader": false,
+          "showFullScreen": false,
+          "api": {
+            "path": "/api/entity/{type}/{assetId}",
+            "pathParams": {
+              "assetId": ":pathParam",
+              "type": ":pathParam"
+            },
+            "queryParams": {
+              "window": ""
+            },
+            "id": "assetDetail"
+          },
+          "title": "Overview"
+        },
+        "attributes": {
+          "header": {
+            "style": {
+              "paddingRight": "50px"
+            }
+          },
+          "style": {
+            "width": "100%",
+            "marginTop": "30px",
+            "marginRight": "30px",
+            "backgroundSize": "20px 20px",
+            "backgroundImage": "linear-gradient(to right, #F1F1F3 1px, transparent 1px), linear-gradient(to bottom, #F1F1F3 1px, #FAFAFB 1px)",
+            "padding" : "0px"
+          },
+          "canvasStyle": {
+            "height": "95%",
+            "width": "100%"
+          },
+          "id": "NetworkGraph"
+        },
+        "timelineId": "primary-timeline"
+      }
+    ],
+    [
+      {
+        "id": "asset-activity",
+        "type": "AssetMultiChart",
+        "meta": {
+          "showHeader": true,
+          "title": "Activity",
+          "showRefresh": false,
+          "api": null
+        },
+        "attributes": {
+          "style": {
+            "width": "35%",
+            "marginLeft": "30px",
+            "flexDirection": "column"
+          },
+          "id": "activity"
+        }
+      },
+      {
+        "id": "timeline",
+        "type": "Timeline",
+        "meta": {
+          "showHeader": true,
+          "showErrorMessage": false,
+          "showFullScreen": false,
+          "showSearch": true,
+          "serverSideFilter": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "queryParams": {
+              "window": "",
+              "count": 10,
+              "from": 0,
+              "asset": "assetId:pathParam",
+              "type": "type:pathParam"
+            },
+            "pathParams": {
+              "reportId": "taf_alert_by_asset"
+            },
+            "loadOnce": true
+          },
+          "title": "Timeline"
+        },
+        "attributes": {
+          "type": "alert",
+          "displaySelectedRows": true,
+          "noOfEventsPerPage": 10,
+          "maxNumbersOnLeftRightPagination": 4,
+          "style": {
+            "width": "65%",
+            "marginRight": "30px",
+            "backgroundColor": "#F7F7F9"
+          },
+          "otherStyles": {
+            "flex": {
+              "display": "flex"
+            },
+            "pagination": {
+              "bottom": 0,
+              "position": "absolute"
+            },
+            "searchBar": {
+              "backgroundColor": "#ffffff"
+            }
+          },
+          "id": "timeline-component"
+        },
+        "tabs": {
+          "DETAILS": {
+            "primary": {
+              "path": "/api/analytics/reporting/execute/{reportId}",
+              "queryParams": {
+                "window": "",
+                "count": 10,
+                "from": 0,
+                "asset": "assetId:pathParam",
+                "type": "type:pathParam"
+              },
+              "pathParams": {
+                "reportId": "taf_alert_by_asset"
+              }
+            },
+            "secondary": {
+              "meta": {
+                "showHeader": false,
+                "api": {
+                  "path": "/api/anomaly/{anomalyId}/events",
+                  "pathParams": {
+                    "selectedCardId": "anomalyId"
+                  },
+                  "queryParams": {
+                    "window": "",
+                    "from": 0,
+                    "count": 10,
+                    "date": ""
+                  }
+                },
+                "title": ""
+              },
+              "attributes": {
+                "type": "anomalyEvents",
+                "displaySelectedRows": true,
+                "noOfEventsPerPage": 10,
+                "maxNumbersOnLeftRightPagination": 4,
+                "isMainComponent": false,
+                "style": {
+                  "width": "100%",
+                  "height": "100%",
+                  "backgroundColor": "#EBEBEF",
+                  "borderLeft": "1px solid #EBEBEF",
+                  "boxShadow": "-5px 0px 14px -3px #cbcbd1"
+                },
+                "otherStyles": {
+                  "flex": {},
+                  "pagination": {}
+                },
+                "id": "timeline-contextual-menu"
+              },
+              "timelineType": "secondary"
+            },
+            "type": "alert"
+          },
+          "SESSIONS": {
+            "primary": {
+              "path": "/api/analytics/reporting/execute/{reportId}",
+              "queryParams": {
+                "window": "",
+                "count": 10,
+                "from": 0,
+                "asset": "assetId:pathParam",
+                "type": "type:pathParam",
+                "type:pathParam": "assetId:pathParam"
+              },
+              "pathParams": {
+                "reportId": "taf_asset_session_details"
+              }
+            },
+            "secondary": {
+              "meta": {
+                "showHeader": false,
+                "api": {
+                  "path": "/api/analytics/reporting/execute/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_asset_session_event_details"
+                  },
+                  "queryParams": {
+                    "window": "",
+                    "from": 0,
+                    "count": 10,
+                    "date": "",
+                    "user": "",
+                    "machine": ""
+                  }
+                },
+                "title": ""
+              },
+              "attributes": {
+                "type": "sessionDetails",
+                "displaySelectedRows": true,
+                "noOfEventsPerPage": 10,
+                "maxNumbersOnLeftRightPagination": 4,
+                "isMainComponent": false,
+                "style": {
+                  "width": "100%",
+                  "height": "100%",
+                  "backgroundColor": "#EBEBEF",
+                  "borderLeft": "1px solid #EBEBEF",
+                  "boxShadow": "-5px 0px 14px -3px #cbcbd1"
+                },
+                "otherStyles": {
+                  "flex": {},
+                  "pagination": {}
+                },
+                "id": "timeline-contextual-menu"
+              },
+              "timelineType": "secondary"
+            },
+            "type": "sessions"
+          }
+        },
+        "timelineType": "primary"
+      }
+    ]
+  ]
+}

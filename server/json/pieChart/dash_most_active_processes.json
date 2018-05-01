@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "api": {
+      "reportId": "taf_sysmon_unique_process_count,taf_processes_with_most_network_conn,taf_sysmon_total_network_conn_count"
+    }
+  },
+  "chart": {
+    "options": {},
+    "data": {
+      "fieldMapping": [
+        {
+          "reportId": "taf_sysmon_unique_process_count",
+          "columns": [
+            {
+              "name": "count",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "countValue"
+        },
+        {
+          "reportId": "taf_sysmon_total_network_conn_count",
+          "columns": [
+            {
+              "name": "count",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "totalValue"
+        },
+        {
+          "reportId": "taf_processes_with_most_network_conn",
+          "columns": [
+            {
+              "name": "count",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "topValue"
+        }
+      ]
+    },
+    "legends": {
+      "title": [
+        "Network Connections",
+        "Processes"
+      ],
+      "label": "Made by"
+    }
+  }
+}

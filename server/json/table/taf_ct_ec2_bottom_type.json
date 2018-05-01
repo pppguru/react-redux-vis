@@ -1,0 +1,58 @@
+{
+  "options": {
+    "itemsPerPage": 5,
+    "rowClickable": true
+  },
+  "data": {
+    "fieldMapping": [
+      {
+        "reportId": "taf_ct_ec2_bottom_type",
+        "columns": [
+          {
+            "data": [
+              {
+                "fieldName": "data.cloudtrail.eventName"
+              }
+            ],
+            "style": {
+              "width": "50%",
+              "wordBreak": "break-all"
+            },
+            "type": "text",
+            "header": "Event Name"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "type"
+              }
+            ],
+            "chart": {
+              "width": "100%",
+              "type": "area2d",
+              "id": "bottom-types",
+              "height": "90",
+              "options": {
+                "labelFontSize": "9"
+              }
+            },
+            "style": {
+              "width": "50%"
+            },
+            "type": "chart",
+            "header": "# Events"
+          }
+        ]
+      }
+    ],
+    "nestedResult": true,
+    "emptyValueMessage": "(Empty)"
+  },
+  "details": {
+    "meta":{
+      "queryParams": {
+        "data.cloudtrail.eventName": "data.cloudtrail.eventName:fieldName"
+      }
+    }
+  }
+}

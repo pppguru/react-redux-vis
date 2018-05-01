@@ -1,0 +1,22 @@
+@import 'color';
+
+.context-menu {
+  li:hover, li.clicked {
+    background-color: $CloudColorShade6;
+    color: $BarColor;
+    & .material-icons {
+      color: $BarColor !important;
+    }
+  }
+
+  li.selected {
+    color: $BarColor;
+    & .material-icons {
+      color: $BarColor !important;
+    }
+  }
+
+  // li:last-child > div {
+  //   border: 0 !important;
+  // }
+}

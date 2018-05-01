@@ -1,0 +1,40 @@
+{
+  "parser"  : "babel-eslint",
+  "extends" : [
+    "standard",
+    "standard-react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "plugins" : [
+    "babel"
+  ],
+  "env"     : {
+    "browser" : true,
+    "node": true
+  },
+  "globals" : {
+    "Action"       : false,
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false,
+    "__DEBUG_NEW_WINDOW__" : false,
+    "__BASENAME__" : false,
+    "FusionCharts": false,
+    "vis": false
+  },
+  "rules": {
+    "semi" : [2, "always"],
+    "max-len": [2, 120, 2],
+    "space-before-function-paren": [2, "never"],
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+    "one-var": [0, {
+      "var": "always", // Exactly one var declaration per function
+      "let": "never", // Exactly one let declaration per block
+      "const": "never" // Exactly one declarator per const declaration per block
+    }],
+    "jsx-quotes": ["error", "prefer-single"]
+  }
+}

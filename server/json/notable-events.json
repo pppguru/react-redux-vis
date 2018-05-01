@@ -1,0 +1,612 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": null
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "backgroundColor": "transparent"
+          }
+        },
+        "id": "metricsBar",
+        "type": "MetricsBar",
+        "childrenComponent": [
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_alert_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "1",
+            "type": "MetricsCard",
+            "title": "High Priority Anomalies",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_malware_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "2",
+            "type": "MetricsCard",
+            "title": "High Priority Malware",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "malware",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_event_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_event_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "3",
+            "type": "MetricsCard",
+            "title": "Events Processed"
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_asset_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_asset_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Assets Monitored"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "4",
+            "type": "MetricsCard",
+            "title": "Assets Monitored"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "STATUS",
+            "yAxisname": "COUNT",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_login_failure_by_type",
+                "columns": [
+                  "data.login.subStatus"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_login_failure_by_type",
+                "columns": [
+                  "count"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_login_failure_by_type"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Login failure by type"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "loginFailureByType"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.login.subStatus": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "login-failure-by-type",
+        "type": "charts/ParetoChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "USER",
+            "yAxisname": "COUNT",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_login_failure_by_user",
+                "columns": [
+                  "data.login.user"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_login_failure_by_user",
+                "columns": [
+                  "count"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_login_failure_by_user"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Login failure by user"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "loginFailureByUser"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.login.user": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "login-failure-by-user",
+        "type": "charts/ParetoChart"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "TIME",
+            "yAxisname": "COUNT"
+          },
+          "specificOptions": {
+            "displayLabelAs": {
+              "slanted": true,
+              "afterCount": 8
+            }
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_login_failure_by_time",
+                "columns": [
+                  "date"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_login_failure_by_time",
+                "columns": [
+                  "count"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350",
+          "type": "area2d"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_login_failure_by_time"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Login failure by time"
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "loginFailureByTime"
+        },
+        "id": "login-failure-by-time",
+        "type": "charts/StandardChart"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "MESSAGE",
+            "yAxisname": "COUNT",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "specificOptions": {
+            "displayLabelAs": {
+              "slanted": true,
+              "afterCount": 3
+            }
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_account_management_events_by_type",
+                "columns": [
+                  "data.ad.Message"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_account_management_events_by_type",
+                "columns": [
+                  "count"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_account_management_events_by_type"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Account management events"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "33%"
+          },
+          "id": "AccountManagementEventsByType"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.ad.Message": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "account-management-events-by-type",
+        "type": "charts/ParetoChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "MESSAGE",
+            "yAxisname": "COUNT",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "specificOptions": {
+            "displayLabelAs": {
+              "slanted": true,
+              "afterCount": 3
+            }
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_computer_management_events_by_type",
+                "columns": [
+                  "data.ad.Message"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_computer_management_events_by_type",
+                "columns": [
+                  "count"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_computer_management_events_by_type"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Computer management events"
+        },
+        "attributes": {
+          "style": {
+            "marginRight": "30px",
+            "width": "33%"
+          },
+          "id": "ComputerManagementEventsByType"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.ad.Message": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "computer-management-events-by-type",
+        "type": "charts/ParetoChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "MESSAGE",
+            "yAxisname": "COUNT",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "specificOptions": {
+            "displayLabelAs": {
+              "slanted": true,
+              "afterCount": 3
+            }
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_security_group_management_events_by_type",
+                "columns": [
+                  "data.ad.Message"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_security_group_management_events_by_type",
+                "columns": [
+                  "count"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_security_group_management_events_by_type"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Security Group management events"
+        },
+        "attributes": {
+          "style": {
+            "width": "33%",
+            "marginRight": "30px"
+          },
+          "id": "SecurityGroupManagementEventsByType"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.ad.Message": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "security-group-management-events-by-type",
+        "type": "charts/ParetoChart"
+      }
+    ]
+  ]
+}

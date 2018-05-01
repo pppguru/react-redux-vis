@@ -1,0 +1,440 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": null
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "backgroundColor": "transparent"
+          }
+        },
+        "id": "metricsBar",
+        "type": "MetricsBar",
+        "childrenComponent": [
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_alert_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "1",
+            "type": "MetricsCard",
+            "title": "High Priority Anomalies",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_malware_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "2",
+            "type": "MetricsCard",
+            "title": "High Priority Malware",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "malware",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_event_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_event_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "3",
+            "type": "MetricsCard",
+            "title": "Events Processed"
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_asset_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_asset_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Assets Monitored"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "4",
+            "type": "MetricsCard",
+            "title": "Assets Monitored"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "dash_top_connections"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Top Connections"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "PieChartConnections"
+        },
+        "id": "pie-chart-connections",
+        "type": "charts/PieChart"
+      },
+      {
+        "chartOptions": {
+          "showValues": "1",
+          "showLabels": "1",
+          "numberSuffix": "%",
+          "chartRightMargin": "0"
+        },
+        "chart": {
+          "showAnnotations": false
+        },
+        "chartData": {
+          "showTrendLines": true,
+          "fieldMapping": [
+            {
+              "reportId": "taf_asset_count_time_shifted",
+              "columns": [
+                "0.0"
+              ]
+            },
+            {
+              "reportId": "taf_total_usage",
+              "columns": [
+                "date"
+              ]
+            },
+            {
+              "reportId": "taf_top_talkers_connections",
+              "columns": [
+                "connections"
+              ]
+            }
+          ],
+          "reportId": "taf_top_talkers_connections",
+          "trendLines": [
+            {
+              "line": [
+                {
+                  "dashed": "1",
+                  "color": "#f37133",
+                  "valueOnRight": "1",
+                  "dashLen": "4",
+                  "dashGap": "2"
+                }
+              ]
+            }
+          ],
+          "multipleReportIds": true
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "reportId": "taf_top_talkers_connections",
+            "queryParams": {
+              "source.name": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_total_usage,taf_top_talkers_connections,taf_asset_count_time_shifted"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Top IPs Using The Most Connections"
+        },
+        "attributes": {
+          "chartCaption": {
+            "display": "none"
+          },
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "HorizontalBarChartConnections"
+        },
+        "id": "horizontal-bar-chart-connections",
+        "type": "charts/HorizontalBarChart"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "dash_top_bandwidth"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Top Bandwidth"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "PieChartBandwidth"
+        },
+        "id": "pie-chart-bandwidth",
+        "type": "charts/PieChart"
+      },
+      {
+        "chartOptions": {
+          "showValues": "1",
+          "showLabels": "1",
+          "numberSuffix": "%",
+          "chartRightMargin": "0"
+        },
+        "chart": {
+          "showAnnotations": false
+        },
+        "chartData": {
+          "showTrendLines": true,
+          "fieldMapping": [
+            {
+              "reportId": "taf_asset_count_time_shifted",
+              "columns": [
+                "0.0"
+              ]
+            },
+            {
+              "reportId": "taf_total_usage",
+              "columns": [
+                "bandwidth"
+              ]
+            },
+            {
+              "reportId": "taf_top_talkers_bandwidth",
+              "columns": [
+                "bandwidth"
+              ]
+            }
+          ],
+          "reportId": "taf_top_talkers_bandwidth",
+          "trendLines": [
+            {
+              "line": [
+                {
+                  "dashed": "1",
+                  "color": "#f37133",
+                  "valueOnRight": "1",
+                  "dashLen": "4",
+                  "dashGap": "2"
+                }
+              ]
+            }
+          ],
+          "multipleReportIds": true
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "reportId": "taf_top_talkers_bandwidth",
+            "queryParams": {
+              "source.name": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_total_usage,taf_top_talkers_bandwidth,taf_asset_count_time_shifted"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Top IPs Using The Highest Bandwidth"
+        },
+        "attributes": {
+          "chartCaption": {
+            "display": "none"
+          },
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "HorizontalBarChartBandwidth"
+        },
+        "id": "horizontal-bar-chart-bandwidth",
+        "type": "charts/HorizontalBarChart"
+      }
+    ]
+  ]
+}

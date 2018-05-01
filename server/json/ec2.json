@@ -1,0 +1,517 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_alert_count_time_shifted"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "countStyle": {
+            "color": "#F69275"
+          },
+          "style": {
+            "marginRight": "3px",
+            "width": "25%",
+            "borderTop": "6px solid #F69275"
+          }
+        },
+        "id": "1",
+        "type": "MetricsCard",
+        "title": "High Priority Anomalies",
+        "clickData": {
+          "tableId": "RecentAnomalies",
+          "filterText": "",
+          "page": "/alerts"
+        }
+      },
+      {
+        "meta": {
+          "showHeader": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_malware_count_time_shifted"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "countStyle": {
+            "color": "#F69275"
+          },
+          "style": {
+            "marginRight": "3px",
+            "width": "25%",
+            "borderTop": "6px solid #F69275"
+          }
+        },
+        "id": "2",
+        "type": "MetricsCard",
+        "title": "High Priority Malware",
+        "clickData": {
+          "tableId": "RecentAnomalies",
+          "filterText": "malware",
+          "page": "/alerts"
+        }
+      },
+      {
+        "meta": {
+          "showHeader": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_aws_total_events"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "countStyle": {
+            "color": "#03C5ED"
+          },
+          "style": {
+            "marginRight": "3px",
+            "width": "25%",
+            "borderTop": "6px solid #03C5ED"
+          }
+        },
+        "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_aws_total_events"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "AWS Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+        "id": "3",
+        "type": "MetricsCard",
+        "title": "AWS Events Processed"
+      },
+      {
+        "meta": {
+          "showHeader": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_unique_users"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "countStyle": {
+            "color": "#03C5ED"
+          },
+          "style": {
+            "width": "25%",
+            "borderTop": "6px solid #03C5ED"
+          }
+        },
+        "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_ct_unique_users"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Assets Monitored"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+        "id": "4",
+        "type": "MetricsCard",
+        "title": "Unique Users and Roles"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_ct_ec2_top_type"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Top EC2 Event Types"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px",
+            "marginLeft": "30px"
+          },
+          "id": "top-type"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "toptype",
+        "type": "List"
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_ct_ec2_bottom_type"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Bottom EC2 Event Types"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "bot-type"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "bottype",
+        "type": "List"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_ct_ec2_top_user"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Users with Most EC2 Events"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "top-user"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "topuser",
+        "type": "List"
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_ct_ec2_bottom_user"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Users with Least EC2 Events"
+        },
+        "attributes": {
+          "style": {
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "bot-user"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "botuser",
+        "type": "List"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "REGION",
+            "yAxisname": "EVENTS",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_ct_ec2_region",
+                "columns": [
+                  "data.cloudtrail.awsRegion"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_ct_ec2_region",
+                "columns": [
+                  "type"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_ec2_region"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Region"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "region"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.cloudtrail.awsRegion": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "awsregion",
+        "type": "charts/ParetoChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "USER AGENT",
+            "yAxisname": "EVENTS",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_ct_ec2_ua",
+                "columns": [
+                  "data.aws.userAgent"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_ct_ec2_ua",
+                "columns": [
+                  "type"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_ec2_ua"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "User Agent"
+        },
+        "attributes": {
+          "style": {
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "ua"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.aws.userAgent": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "useragent",
+        "type": "charts/ParetoChart"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {},
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_ct_ec2_event_bad_rep",
+                "columns": {
+                  "country": "source.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "malicious"
+              },
+              {
+                "reportId": "taf_ct_ec2_event_by_country",
+                "columns": {
+                  "country": "source.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "secure"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "details": {
+          "itemsPerPage": 7,
+          "meta": {
+            "reportId": "taf_ct_ec2_event_by_country",
+            "queryParams": {
+              "source.country": {
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "subTitle": "NUMBER EC2 CONNECTIONS BY COUNTRY",
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_ec2_event_by_country,taf_ct_ec2_event_bad_rep"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "EC2 Events by Country"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "100%"
+          },
+          "legendStyle": {
+            "width": "15%",
+            "marginLeft": "-15%"
+          },
+          "id": "sec"
+        },
+        "id": "sec-map",
+        "type": "maps/WorldMap"
+      }
+    ]
+  ]
+}

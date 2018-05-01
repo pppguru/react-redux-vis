@@ -1,0 +1,10 @@
+{
+  "directory": "./client/static/bower_components",
+  "interactive": false,
+  "registry": {
+    "search": [
+      "https://bower.ranksoftwareinc.com"
+    ]
+  },
+  "strict-ssl": false
+}

@@ -1,0 +1,51 @@
+/*
+Application Settings Go Here
+------------------------------------
+This file acts as a bundler for all variables/mixins/themes, so they
+can easily be swapped out without `core.scss` ever having to know.
+
+For example:
+
+@import './variables/components';
+@import './themes/default';
+*/
+
+@import 'color';
+
+body {
+  background-color: $CloudColorShade0;
+  color: $GrapeColor;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul.no-list-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
+}
+
+.context-menu div li {
+  list-style: none;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}

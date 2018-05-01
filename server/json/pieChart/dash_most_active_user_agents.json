@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "api": {
+      "reportId": "taf_s3_total,taf_s3_ua,taf_s3_most_frequent_useragent"
+    }
+  },
+  "chart": {
+    "options": {},
+    "data": {
+      "fieldMapping": [
+        {
+          "reportId": "taf_s3_ua",
+          "columns": [
+            {
+              "name": "data.aws.userAgent",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "countValue"
+        },
+        {
+          "reportId": "taf_s3_total",
+          "columns": [
+            {
+              "name": "date",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "totalValue"
+        },
+        {
+          "reportId": "taf_s3_most_frequent_useragent",
+          "columns": [
+            {
+              "name": "date",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "topValue"
+        }
+      ]
+    },
+    "legends": {
+      "title": [
+        "Events",
+        "User Agents"
+      ],
+      "label": "Caused by"
+    }
+  }
+}

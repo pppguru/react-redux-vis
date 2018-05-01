@@ -1,0 +1,24 @@
+.DS_STORE
+*.log
+npm-debug.log.*
+nohup.out
+
+node_modules
+
+dist
+coverage
+
+target
+.settings
+.project
+
+client/static/bower_components
+client/layout.js
+
+# Environment files
+client/static/env.js
+serverEnv.js
+
+*.json.gzip
+
+.idea

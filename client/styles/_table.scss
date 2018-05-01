@@ -1,0 +1,196 @@
+@import 'variable';
+
+.threatTable {
+  table {
+    text-align: left;
+    width:100% !important;
+  }
+
+  td {
+    font-size: 13px;
+    padding: 15px;
+    color: $GrapeColor;
+    vertical-align: top;
+    line-height: 17px;
+  }
+
+  th {
+    padding: 10px;
+    padding-bottom: 16px;
+    font-size: 13px;
+    background: $WhiteColor;
+    color: $GrapeColor;
+    text-align: left;
+    cursor: pointer;
+    font-weight: normal;
+  }
+ }
+
+.threatTable .reactable-page-button {
+  margin-left: 5px;
+  margin-right: 2px;
+  margin-bottom: 6px;
+  padding: 3px;
+  width: 30px;
+  float: left;
+  cursor: pointer;
+  color: $GrapeColor;
+  text-align: center;
+  text-decoration: none;
+}
+.threatTable .reactable-next-page {
+  margin-left: 5px;
+  margin-right: 2px;
+  margin-bottom: 6px;
+  padding: 3px;
+  float: left;
+  cursor: pointer;
+  color: $GrapeColor;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.threatTable .reactable-previous-page {
+  margin-left: 5px;
+  margin-right: 2px;
+  margin-bottom: 6px;
+  padding: 3px;
+  float: left;
+  cursor: pointer;
+  color: $GrapeColor;
+  text-align: center;
+  text-decoration: none;
+}
+.threatTable .reactable-page-button:hover, .reactable-previous-page:hover, .reactable-next-page:hover {
+  text-decoration: none;
+  color: $GrapeColor;
+}
+
+.threatTable .reactable-current-page, .reactable-current-page:hover {
+  background-color: $CloudColorShade2;
+  color: $GrapeColor;
+  cursor: default;
+}
+
+.threatTable th.reactable-header-sort-desc, .threatTable th.reactable-header-sort-asc {
+  background: $WhiteColor;
+}
+
+.threatTable th.reactable-header-sort-desc:after {
+  content: '';
+  background: url('/img/Up-arrow.png') no-repeat 0 0;
+  display:inline-block;
+  font-size: 13px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-weight: semibold;
+  margin-left: 10px;
+}
+
+.threatTable th.reactable-header-sort-asc:after {
+  content: '';
+  background: url('/img/Down-arrow.png') no-repeat 0 0;
+  display:inline-block;
+  font-size: 13px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-weight: semibold;
+  margin-left: 10px;
+}
+
+tr.reactable-filterer {
+  width: 100%;
+}
+
+tr.reactable-filterer td {
+  width: 100%;
+}
+
+.threatTable tr:nth-child(even) {background: $WhiteColor}
+.threatTable tr:nth-child(odd) {background: $CloudColorShade2;}
+
+.threatTable tr:nth-child(even) td div.scoreWidget {background: $CoralColorShade1}
+.threatTable tr:nth-child(odd) td div.scoreWidget {background: $CoralColorShade2}
+.threatTable tr:nth-child(even) td span.description {font-weight: 600; font-size: 14px;}
+.threatTable tr:nth-child(odd) td span.description {font-weight: 600; font-size: 14px;}
+
+.threatTable tr td span.title {color: $CloudColorShade1; font-weight: 600; font-size: 14px;}
+.threatTable tr td span.heading {color: $CloudColorShade1; font-weight: 600; font-size: 13px;}
+
+.sw-high-priority {
+  background: linear-gradient(to bottom, #f69275,#f79c81,#f8a58d,#f8ae99);
+}
+
+.sw-low-priority {
+  background: linear-gradient(to bottom,#fcc875,#fccd80,#fcd18b,#fdd698);
+}
+
+.reactable-pagination tr {
+background-color: $WhiteColor !important;
+}
+
+.reactable-filter-input {
+  width: 95%;
+  margin-left: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.duration {
+  padding:8px;float:left;font-size:13px;
+}
+
+.durationSeparator {
+    padding:8px 5px 5px;background-color:transparent;float:left;font-size:13px;
+}
+.durationLabel {
+    padding: 1px 7px 0px;background-color:transparent;float:left;font-size:12px;
+}
+
+.pagination {
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 13px;
+  font-family: $DefaultFont;
+}
+.pagination > li {
+  display: inline;
+}
+.pagination > li:first-child > button, .pagination > li:first-child > span {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  margin-left: 0;
+}
+.pagination > li > button, .pagination > li > span {
+  background-color: transparent;
+  border: 0px;
+  color: $GrapeColor;
+  float: left;
+  line-height: 1.42857;
+  margin-left: -1px;
+  padding: 6px 12px;
+  position: relative;
+  text-decoration: none;
+}
+.pagination > .active > button, .pagination > .active > button:focus, .pagination > .active > button:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  background-color: $CloudColorShade8;
+  border-color: $CloudColorShade8;
+  color: $CloudColorShade7;
+  cursor: default;
+  z-index: 3;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}

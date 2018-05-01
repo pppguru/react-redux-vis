@@ -1,0 +1,167 @@
+{
+  "data": {
+    "fieldMapping": [
+      {
+        "reportId": "taf_top_longest_connections",
+        "columns": [
+          {
+            "data": [
+              {
+                "fieldName": "date",
+                "displayName": "date"
+              }
+            ],
+            "style": {
+              "width": "10%"
+            },
+            "type": "text",
+            "header": "END DATE"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "data.conn.duration",
+                "displayName": "duration"
+              }
+            ],
+            "style": {
+              "width": "15%"
+            },
+            "type": "durationWidget",
+            "header": "DURATION"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "data.conn.duration",
+                "displayName": "duration"
+              }
+            ],
+            "style": {
+              "width": "15%"
+            },
+            "type": "loadComponent",
+            "header": "DURATIONnew"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "protocol.service"
+              },
+              {
+                "fieldName": "data.conn.reqBytes",
+                "displayName": "Incoming bytes"
+              },
+              {
+                "fieldName": "data.conn.respBytes",
+                "displayName": "Outcoming bytes"
+              }
+            ],
+            "style": {
+              "width": "35%"
+            },
+            "type": "text",
+            "header": "DETAILS"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "source.ip",
+                "displayName": "IP"
+              },
+              {
+                "fieldName": "source.port",
+                "displayName": "port"
+              },
+              {
+                "fieldName": "source.country",
+                "displayName": "country"
+              },
+              {
+                "fieldName": "source.name",
+                "displayName": "Machine"
+              },
+              {
+                "fieldName": "source.owner",
+                "displayName": "Owner"
+              },
+              {
+                "fieldName": "source.asn",
+                "displayName": "ASN"
+              },
+              {
+                "fieldName": "source.assets",
+                "displayName": "Users"
+              }
+            ],
+            "style": {
+              "width": "20%"
+            },
+            "type": "text",
+            "header": "SOURCE"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "destination.ip",
+                "displayName": "IP"
+              },
+              {
+                "fieldName": "destination.port",
+                "displayName": "port"
+              },
+              {
+                "fieldName": "destination.country",
+                "displayName": "country"
+              },
+              {
+                "fieldName": "destination.name",
+                "displayName": "Machine"
+              },
+              {
+                "fieldName": "destination.owner",
+                "displayName": "Owner"
+              },
+              {
+                "fieldName": "destination.asn",
+                "displayName": "ASN"
+              },
+              {
+                "fieldName": "destination.assets",
+                "displayName": "Users"
+              }
+            ],
+            "style": {
+              "width": "20%"
+            },
+            "type": "text",
+            "header": "DESTINATION"
+          }
+        ]
+      }
+    ]
+  },
+  "options": {
+    "filterable": [],
+    "itemsPerPage": 5,
+    "sortable": [
+      "END DATE",
+      "DURATION",
+      "DETAILS",
+      "SOURCE",
+      "DESTINATION"
+    ],
+    "defaultSort": {
+      "column": "DURATION",
+      "direction": "asc"
+    },
+    "rowClickable": true
+  },
+  "details": {
+    "meta": {
+      "queryParams": {
+        "correlationIds": "correlationIds[0]:fieldName"
+      }
+    }
+  }
+}

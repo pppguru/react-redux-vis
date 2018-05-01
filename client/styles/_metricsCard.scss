@@ -1,0 +1,7 @@
+@import 'color';
+
+.metric-card {
+  &:hover {
+    background-color: rgba($CloudColor, 0.5);
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "options": {
+    "itemsPerPage": 5,
+    "rowClickable": true
+  },
+  "data": {
+    "fieldMapping": [
+      {
+        "reportId": "taf_s3_least_accessed",
+        "columns": [
+          {
+            "data": [
+              {
+                "fieldName": "data.s3.key"
+              }
+            ],
+            "style": {
+              "width": "50%",
+              "wordBreak": "break-all"
+            },
+            "type": "text",
+            "header": "File Name"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "type"
+              }
+            ],
+            "chart": {
+              "width": "100%",
+              "height": "120",
+              "type": "area2d",
+              "id": "least-connection",
+              "options": {
+                "labelFontSize": "9"
+              }
+            },
+            "style": {
+              "width": "50%"
+            },
+            "type": "chart",
+            "header": "# Accesses"
+          }
+        ]
+      }
+    ],
+    "nestedResult": true,
+    "emptyValueMessage": "(Empty)"
+  },
+  "details": {
+    "meta": {
+      "queryParams": {
+        "data.s3.key": "data.s3.key:fieldName"
+      }
+    }
+  }
+}

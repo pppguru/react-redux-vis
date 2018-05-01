@@ -1,0 +1,6 @@
+blueprints/**/files/**
+coverage/**
+node_modules/**
+dist/**
+client/index.html
+client/static/bower_components/**

@@ -1,0 +1,945 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": null
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "backgroundColor": "transparent"
+          }
+        },
+        "id": "metricsBar",
+        "type": "MetricsBar",
+        "childrenComponent": [
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_alert_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "1",
+            "type": "MetricsCard",
+            "title": "High Priority Anomalies",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_malware_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "2",
+            "type": "MetricsCard",
+            "title": "High Priority Malware",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "malware",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_event_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_event_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "3",
+            "type": "MetricsCard",
+            "title": "Events Processed"
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_asset_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_asset_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Assets Monitored"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "4",
+            "type": "MetricsCard",
+            "title": "Assets Monitored"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "ANOMALY TYPES",
+            "pYAxisname": "ANOMALY COUNT",
+            "paletteColors": "#03C5ED"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_threat_trend",
+                "columns": [
+                  "data.rank_alert.category"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_threat_trend",
+                "columns": [
+                  "date"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_threat_trend"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Anomalies by Type"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "AlertByType"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.rank_alert.category": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          },
+          "secondaryClick": {
+            "page": "alert",
+            "pathParams": {
+              "id": "id:fieldName",
+              "date": "date:fieldName"
+            }
+          }
+        },
+        "id": "alert-by-type",
+        "type": "charts/ParetoChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "ENTITIES",
+            "pYAxisname": "ALERT COUNT"
+          },
+          "specificOptions": {
+            "displayLabelAs": {
+              "slanted": true,
+              "afterCount": 4
+            }
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_top_entity_with_alerts",
+                "columns": [
+                  "destination.name"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_top_entity_with_alerts",
+                "columns": [
+                  "count"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_top_entity_with_alerts"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Top Attacked Entities"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "TopAttackedEntities"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "destination.name": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          },
+          "secondaryClick": {
+            "page": "alert",
+            "pathParams": {
+              "id": "id:fieldName",
+              "date": "date:fieldName"
+            }
+          }
+        },
+        "id": "top-attacked-entities",
+        "type": "charts/ParetoChart"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "TIME",
+            "yAxisname": "COUNT"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_at_risk_assets_by_time",
+                "columns": [
+                  "risk.lastUpdated"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_at_risk_assets_by_time",
+                "columns": [
+                  "id"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350",
+          "type": "area2d"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_at_risk_assets_by_time"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "End points at Risk"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "atRiskAssetsByTime"
+        },
+        "id": "at-risk-assets-by-time",
+        "type": "charts/StandardChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "SCORE",
+            "yAxisname": "COUNT",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_at_risk_assets_by_risk",
+                "columns": [
+                  "risk.score"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_at_risk_assets_by_risk",
+                "columns": [
+                  "id"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_at_risk_assets_by_risk"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "At Risk Asset Count by Score"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "atRiskAssetByRisk"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "risk.score": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          },
+          "secondaryClick": {
+            "page": "asset",
+            "pathParams": {
+              "type": "type:fieldName",
+              "Name": "Name:fieldName"
+            }
+          }
+        },
+        "id": "at-risk-asset-by-risk",
+        "type": "charts/ParetoChart"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "dash_top_connections"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Top Connections"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "PieChartConnections"
+        },
+        "id": "pie-chart-connections",
+        "type": "charts/PieChart"
+      },
+      {
+        "chartOptions": {
+          "showValues": "1",
+          "showLabels": "1",
+          "numberSuffix": "%",
+          "chartRightMargin": "0"
+        },
+        "chart": {
+          "showAnnotations": false
+        },
+        "chartData": {
+          "showTrendLines": true,
+          "fieldMapping": [
+            {
+              "reportId": "taf_asset_count_time_shifted",
+              "columns": [
+                "0.0"
+              ]
+            },
+            {
+              "reportId": "taf_total_usage",
+              "columns": [
+                "date"
+              ]
+            },
+            {
+              "reportId": "taf_top_talkers_connections",
+              "columns": [
+                "connections"
+              ]
+            }
+          ],
+          "reportId": "taf_top_talkers_connections",
+          "trendLines": [
+            {
+              "line": [
+                {
+                  "dashed": "1",
+                  "color": "#f37133",
+                  "valueOnRight": "1",
+                  "dashLen": "4",
+                  "dashGap": "2"
+                }
+              ]
+            }
+          ],
+          "multipleReportIds": true
+        },
+        "details": {
+          "meta": {
+            "reportId": "taf_top_talkers_connections",
+            "queryParams": {
+              "source.name": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_total_usage,taf_top_talkers_connections,taf_top_talkers_bandwidth,taf_asset_count_time_shifted"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Top IPs Using The Most Connections"
+        },
+        "attributes": {
+          "chartCaption": {
+            "display": "none"
+          },
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "HorizontalBarChartConnections"
+        },
+        "id": "horizontal-bar-chart-connections",
+        "type": "charts/HorizontalBarChart"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "dash_top_bandwidth"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Top Bandwidth"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "100%"
+          },
+          "id": "PieChartBandwidth"
+        },
+        "id": "pie-chart-bandwidth",
+        "type": "charts/PieChart"
+      },
+      {
+        "chartOptions": {
+          "showValues": "1",
+          "showLabels": "1",
+          "numberSuffix": "%",
+          "chartRightMargin": "0"
+        },
+        "chart": {
+          "showAnnotations": false
+        },
+        "chartData": {
+          "showTrendLines": true,
+          "fieldMapping": [
+            {
+              "reportId": "taf_asset_count_time_shifted",
+              "columns": [
+                "0.0"
+              ]
+            },
+            {
+              "reportId": "taf_total_usage",
+              "columns": [
+                "bandwidth"
+              ]
+            },
+            {
+              "reportId": "taf_top_talkers_bandwidth",
+              "columns": [
+                "bandwidth"
+              ]
+            }
+          ],
+          "reportId": "taf_top_talkers_bandwidth",
+          "trendLines": [
+            {
+              "line": [
+                {
+                  "dashed": "1",
+                  "color": "#f37133",
+                  "valueOnRight": "1",
+                  "dashLen": "4",
+                  "dashGap": "2"
+                }
+              ]
+            }
+          ],
+          "multipleReportIds": true
+        },
+        "details": {
+          "meta": {
+            "reportId": "taf_top_talkers_bandwidth",
+            "queryParams": {
+              "source.name": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_total_usage,taf_top_talkers_connections,taf_top_talkers_bandwidth,taf_asset_count_time_shifted"
+            },
+            "queryParams": {
+              "timeShift": "",
+              "window": ""
+            }
+          },
+          "title": "Top IPs Using The Highest Bandwidth"
+        },
+        "attributes": {
+          "chartCaption": {
+            "display": "none"
+          },
+          "style": {
+            "width": "100%",
+            "marginRight": "30px"
+          },
+          "id": "HorizontalBarChartBandwidth"
+        },
+        "id": "horizontal-bar-chart-bandwidth",
+        "type": "charts/HorizontalBarChart"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {},
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_dest_bad_reputation_countries",
+                "columns": {
+                  "country": "destination.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "malicious"
+              },
+              {
+                "reportId": "taf_dest_countries",
+                "columns": {
+                  "country": "destination.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "secure"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "details": {
+          "meta": {
+            "reportId": "taf_dest_countries",
+            "queryParams": {
+              "destination.country": {
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "subTitle": "NUMBER OF OUTGOING CONNECTIONS BY COUNTRY",
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_dest_countries,taf_dest_bad_reputation_countries"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Outgoing Traffic Threat Map"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "legendStyle": {
+            "width": "15%",
+            "marginLeft": "-15%"
+          },
+          "id": "OutgoingTrafficWorldMap"
+        },
+        "id": "Outgoingworld-map",
+        "type": "maps/WorldMap"
+      },
+      {
+        "chart": {
+          "options": {},
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_source_bad_reputation_countries",
+                "columns": {
+                  "country": "source.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "malicious"
+              },
+              {
+                "reportId": "taf_source_countries",
+                "columns": {
+                  "country": "source.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "secure"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "details": {
+          "meta": {
+            "reportId": "taf_source_countries",
+            "queryParams": {
+              "source.country": {
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "subTitle": "NUMBER OF INCOMING CONNECTIONS BY COUNTRY",
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_source_countries,taf_source_bad_reputation_countries"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Incoming Traffic Threat Map"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "legendStyle": {
+            "width": "15%",
+            "marginLeft": "-15%"
+          },
+          "id": "IncomingTrafficWorldMap"
+        },
+        "id": "world-map",
+        "type": "maps/WorldMap"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_least_used_software"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Least Used Software Details"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "33%"
+          },
+          "id": "least-used-software-details"
+        },
+        "details": {
+          "itemsPerPage": 10
+        },
+        "id": "LeastUsedSoftwareDetails",
+        "type": "List"
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_top_successful_logins"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Successful Logins"
+        },
+        "attributes": {
+          "style": {
+            "marginRight": "30px",
+            "width": "33%"
+          },
+          "id": "successful-logins"
+        },
+        "details": {
+          "itemsPerPage": 10
+        },
+        "id": "SuccessfulLogins",
+        "type": "List"
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_top_failed_logins"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Failed Logins"
+        },
+        "attributes": {
+          "style": {
+            "width": "33%",
+            "marginRight": "30px"
+          },
+          "id": "failed-logins"
+        },
+        "details": {
+          "itemsPerPage": 10
+        },
+        "id": "FailedLogins",
+        "type": "List"
+      }
+    ]
+  ]
+}

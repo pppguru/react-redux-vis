@@ -1,0 +1,152 @@
+@import '../../styles/color';
+
+.detailsTable table {
+  text-align: left;
+  width:100%;
+ }
+
+.detailsTable th {
+  padding: 10px;
+  height: 45px;
+  font-size: 13px;
+  background: #DFF7F9;
+  color: #24293D;
+  text-align: left;
+  cursor: pointer;
+  font-weight: normal;
+  white-space: nowrap;
+  font-weight: 600;
+ }
+
+.detailsTable td {
+  font-size: 13px;
+  line-height: 17px;
+  padding: 15px;
+  color: $GrapeColor;
+  vertical-align: top;
+  height: 45px;
+  border-right: 1px solid #F2F2F4;
+  max-width: 500px;
+ }
+
+.detailsTable .reactable-page-button {
+  margin-left: 5px;
+  margin-right: 2px;
+  margin-bottom: 6px;
+  padding: 3px;
+  width: 30px;
+  float: left;
+  cursor: pointer;
+  color: $GrapeColor;
+  text-align: center;
+  text-decoration: none;
+}
+.detailsTable .reactable-next-page {
+  margin-left: 5px;
+  margin-right: 2px;
+  margin-bottom: 6px;
+  padding: 3px;
+  float: left;
+  cursor: pointer;
+  color: $GrapeColor;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.detailsTable .reactable-previous-page {
+  margin-left: 5px;
+  margin-right: 2px;
+  margin-bottom: 6px;
+  padding: 3px;
+  float: left;
+  cursor: pointer;
+  color: $GrapeColor;
+  text-align: center;
+  text-decoration: none;
+}
+.detailsTable .reactable-page-button:hover, .reactable-previous-page:hover, .reactable-next-page:hover {
+  text-decoration: none;
+  color: $GrapeColor;
+}
+
+.detailsTable .reactable-current-page, .reactable-current-page:hover {
+  background-color: $CloudColorShade2;
+  color: $GrapeColor;
+  cursor: default;
+}
+
+.detailsTable th.reactable-header-sort-desc:after {
+  content: '';
+  background: url('/img/Up-arrow.png') no-repeat 0 0;
+  display:inline-block;
+  font-size: 13px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-weight: semibold;
+  margin-left: 10px;
+}
+
+.detailsTable th.reactable-header-sort-asc:after {
+  content: '';
+  background: url('/img/Down-arrow.png') no-repeat 0 0;
+  display:inline-block;
+  font-size: 13px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-weight: semibold;
+  margin-left: 10px;
+}
+
+tr.reactable-filterer {
+  width: 100%;
+}
+
+tr.reactable-filterer td {
+  width: 100%;
+}
+
+.detailsTable tr:nth-child(even) {background: $CloudColorShade2}
+.detailsTable tr:nth-child(odd) {background: $WhiteColor;}
+
+.detailsTable tr:nth-child(even) td div.scoreWidget {background: $CoralColorShade1}
+.detailsTable tr:nth-child(odd) td div.scoreWidget {background: $CoralColorShade2}
+.detailsTable tr:nth-child(even) td span.description {font-weight: 600; font-size: 14px;}
+.detailsTable tr:nth-child(odd) td span.description {font-weight: 600; font-size: 14px;}
+
+.detailsTable tr td span.title {color: $CloudColorShade1; font-weight: 600; font-size: 14px;}
+.detailsTable tr td span.heading {color: $CloudColorShade1; font-weight: 600; font-size: 13px;}
+
+.detailsTable tr th:first-child {
+  padding-left: 30px;
+}
+
+.detailsTable tr td:first-child {
+  padding-left: 30px;
+}
+
+.detailsTable tr th:last-child {
+  padding-right: 30px;
+}
+
+.detailsTable tr td:last-child {
+  padding-right: 30px;
+  border-right: 0;
+}
+
+.detailsTable .reactable-data tr:last-child {
+  border-bottom: 1px solid #F2F2F4;
+}
+
+.reactable-pagination tr {
+background-color: $WhiteColor !important;
+}
+
+.reactable-filter-input {
+  width: 95%;
+  margin-left: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 20px;
+  padding: 5px;
+}

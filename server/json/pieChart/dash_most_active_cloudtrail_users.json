@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "api": {
+      "reportId": "taf_ct_events_by_user,taf_ct_most_active_user,taf_ct_total"
+    }
+  },
+  "chart": {
+    "options": {},
+    "data": {
+      "fieldMapping": [
+        {
+          "reportId": "taf_ct_events_by_user",
+          "columns": [
+            {
+              "name": "data.aws.userArn",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "countValue"
+        },
+        {
+          "reportId": "taf_ct_total",
+          "columns": [
+            {
+              "name": "date",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "totalValue"
+        },
+        {
+          "reportId": "taf_ct_most_active_user",
+          "columns": [
+            {
+              "name": "date",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "topValue"
+        }
+      ]
+    },
+    "legends": {
+      "title": [
+        "Events",
+        "Users"
+      ],
+      "label": "Caused by"
+    }
+  }
+}

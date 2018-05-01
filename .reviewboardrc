@@ -1,0 +1,4 @@
+REVIEWBOARD_URL = "https://cr.ranksoftwareinc.com"
+REPOSITORY = "Yoichi"
+BRANCH = "master"
+LAND_DEST_BRANCH = "master"

@@ -1,0 +1,57 @@
+{
+	"options": {
+		"itemsPerPage": 5
+	},
+	"data": {
+		"fieldMapping": [{
+			"reportId": "taf_s3_most_access_by_active_user",
+			"columns": [{
+				"data": [{
+					"fieldName": "data.aws.userArn"
+				}],
+				"style": {
+					"width": "50%",
+					"wordBreak": "break-all"
+				},
+				"type": "text",
+				"header": "Active Users"
+			}, {
+				"data": [{
+					"fieldName": "date"
+				}],
+				"attributes": {
+					"chartWidth": "100%",
+					"id": "connection",
+					"chartType": "area2d",
+					"chartHeight": "120",
+					"chartOptions": {
+						"labelFontSize": "9",
+						"showCumulativeLine": "0"
+					},
+					"fieldMapping": [
+		            {
+		              "reportId": "taf_s3_least_accessed",
+		              "columns": [
+		                "data.s3.key"
+		              ],
+		              "axis": "x"
+		            },
+		            {
+		              "reportId": "taf_s3_least_accessed",
+		              "columns": [
+		                "date"
+		              ],
+		              "axis": "y"
+		            }]
+				},
+				"style": {
+					"width": "50%"
+				},
+				"type": "charts/ParetoChart",
+				"header": "file access"
+			}]
+		}],
+		"nestedResult": true,
+		"emptyValueMessage": "(Empty)"
+	}
+}

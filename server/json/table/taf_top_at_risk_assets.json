@@ -1,0 +1,45 @@
+{
+  "data": {
+    "fieldMapping": [
+      {
+        "reportId": "taf_top_at_risk_assets",
+        "columns": [
+          {
+            "data": [
+              {
+                "fieldName": "info"
+              },
+              {
+                "fieldName": "type"
+              }
+            ],
+            "headingStyle": {
+              "width": "60px",
+              "overflowWrap": "break-word",
+              "textTransform": "none"
+            },
+            "type": "assetWidget",
+            "header": "Asset"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "risk.score"
+              }
+            ],
+            "style": {
+              "minWidth": "60px",
+              "width": "10%"
+            },
+            "type": "scoreWidget",
+            "header": "Score"
+          }
+        ]
+      }
+    ]
+  },
+  "options": {
+    "itemsPerPage": 5,
+    "rowClickable": true
+  }
+}

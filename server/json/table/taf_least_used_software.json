@@ -1,0 +1,40 @@
+{
+  "options": {
+    "itemsPerPage": 5,
+    "rowClickable": true
+  },
+  "data": {
+    "fieldMapping": [
+      {
+        "reportId": "taf_least_used_software",
+        "columns": [
+          {
+            "data": [
+              {
+                "fieldName": "data.software.version"
+              }
+            ],
+            "style": {
+              "width": "80%"
+            },
+            "type": "text",
+            "header": "SOFTWARE NAME"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "count"
+              }
+            ],
+            "style": {
+              "width": "20%"
+            },
+            "type": "text",
+            "header": "COUNT"
+          }
+        ]
+      }
+    ],
+    "emptyValueMessage": "(Empty)"
+  }
+}

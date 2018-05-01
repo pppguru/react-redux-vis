@@ -1,0 +1,11 @@
+{
+  apps : [
+    {
+      name      : "Yoichi",
+      script    : "bin/index.js",
+      env: {
+        NODE_ENV: "production"
+      }
+    },
+  ]
+}

@@ -1,0 +1,736 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_alert_count_time_shifted"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "countStyle": {
+            "color": "#F69275"
+          },
+          "style": {
+            "marginRight": "3px",
+            "width": "25%",
+            "borderTop": "6px solid #F69275"
+          }
+        },
+        "id": "1",
+        "type": "MetricsCard",
+        "title": "High Priority Anomalies",
+        "clickData": {
+          "tableId": "RecentAnomalies",
+          "filterText": "",
+          "page": "/alerts"
+        }
+      },
+      {
+        "meta": {
+          "showHeader": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_malware_count_time_shifted"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "countStyle": {
+            "color": "#F69275"
+          },
+          "style": {
+            "marginRight": "3px",
+            "width": "25%",
+            "borderTop": "6px solid #F69275"
+          }
+        },
+        "id": "2",
+        "type": "MetricsCard",
+        "title": "High Priority Malware",
+        "clickData": {
+          "tableId": "RecentAnomalies",
+          "filterText": "malware",
+          "page": "/alerts"
+        }
+      },
+      {
+        "meta": {
+          "showHeader": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_aws_total_events"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "countStyle": {
+            "color": "#03C5ED"
+          },
+          "style": {
+            "marginRight": "3px",
+            "width": "25%",
+            "borderTop": "6px solid #03C5ED"
+          }
+        },
+        "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_aws_total_events"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "AWS Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+        "id": "3",
+        "type": "MetricsCard",
+        "title": "AWS Events Processed"
+      },
+      {
+        "meta": {
+          "showHeader": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_unique_users"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "countStyle": {
+            "color": "#03C5ED"
+          },
+          "style": {
+            "width": "25%",
+            "borderTop": "6px solid #03C5ED"
+          }
+        },
+        "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_ct_unique_users"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Unique AWS Users"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+        "id": "4",
+        "type": "MetricsCard",
+        "title": "Unique Users and Roles"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_ct_iam_top_success_login"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Success Login by User"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "topsec"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "top-sec",
+        "type": "List"
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_ct_iam_top_failed_login"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Failed Login by User"
+        },
+        "attributes": {
+          "style": {
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "botsec"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "botsec",
+        "type": "List"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "TIME",
+            "yAxisname": "COUNT",
+            "showCumulativeLine": ""
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_ct_iam_failed_by_time",
+                "columns": [
+                  "date"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_ct_iam_failed_by_time",
+                "columns": [
+                  "type"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350",
+          "type": "area2d"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_iam_failed_by_time"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Failed Login By Time"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "upload"
+        },
+        "id": "uploadgraph",
+        "type": "charts/StandardChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "USER",
+            "yAxisname": "# ACCESS",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_ct_iam_failed_by_un",
+                "columns": [
+                  "data.cloudtrail.userIdentity.userName"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_ct_iam_failed_by_un",
+                "columns": [
+                  "type"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_iam_failed_by_un"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Top Failed Login by User"
+        },
+        "attributes": {
+          "style": {
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "failun"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.cloudtrail.userIdentity.userName": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "fail-un",
+        "type": "charts/ParetoChart"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "MFA",
+            "yAxisname": "# ACCESS",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_ct_iam_mfa",
+                "columns": [
+                  "data.cloudtrail.additionalEventData.MFAUsed"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_ct_iam_mfa",
+                "columns": [
+                  "type"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_iam_mfa"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "MFA"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "mfa"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.cloudtrail.additionalEventData.MFAUsed": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "mfa-used",
+        "type": "charts/ParetoChart"
+      },
+      {
+        "chart": {
+          "options": {
+            "xAxisname": "USER",
+            "yAxisname": "# ACCESS",
+            "paletteColors": "#03C5ED",
+            "showCumulativeLine": "0"
+          },
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_ct_iam_top_non_mfa",
+                "columns": [
+                  "data.aws.userArn"
+                ],
+                "axis": "x"
+              },
+              {
+                "reportId": "taf_ct_iam_top_non_mfa",
+                "columns": [
+                  "type"
+                ],
+                "axis": "y"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_iam_top_non_mfa"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Top Non-MFA access by User"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "nomfa"
+        },
+        "details": {
+          "itemsPerPage": 5,
+          "meta": {
+            "queryParams": {
+              "data.aws.userArn": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "no-mfa",
+        "type": "charts/ParetoChart"
+      }
+    ],
+    [
+      {
+        "chart": {
+          "options": {},
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_ct_iam_success_country_bad",
+                "columns": {
+                  "country": "source.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "malicious"
+              },
+              {
+                "reportId": "taf_ct_iam_success_country",
+                "columns": {
+                  "country": "source.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "secure"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "details": {
+          "itemsPerPage": 7,
+          "meta": {
+            "reportId": "taf_ct_iam_success_country",
+            "queryParams": {
+              "source.country": {
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "subTitle": "NUMBER OF SUCCESSFUL LOGINS BY COUNTRY",
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_iam_success_country,taf_ct_iam_success_country_bad"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Success Login by Country"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "legendStyle": {
+            "width": "15%",
+            "marginLeft": "-15%"
+          },
+          "id": "sec"
+        },
+        "id": "sec-map",
+        "type": "maps/WorldMap"
+      },
+      {
+        "chart": {
+          "options": {},
+          "data": {
+            "fieldMapping": [
+              {
+                "reportId": "taf_ct_iam_failed_country_bad",
+                "columns": {
+                  "country": "source.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "malicious"
+              },
+              {
+                "reportId": "taf_ct_iam_failed_country",
+                "columns": {
+                  "country": "source.country",
+                  "x": "pos_x",
+                  "y": "pos_y",
+                  "connections": "connections"
+                },
+                "connection": "secure"
+              }
+            ]
+          },
+          "width": "100%",
+          "height": "350"
+        },
+        "details": {
+          "itemsPerPage": 7,
+          "meta": {
+            "reportId": "taf_ct_iam_failed_country",
+            "queryParams": {
+              "source.country": {
+                "value": ""
+              }
+            }
+          }
+        },
+        "meta": {
+          "subTitle": "NUMBER OF FAILED LOGINS BY COUNTRY",
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_ct_iam_failed_country,taf_ct_iam_failed_country_bad"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Failed Login by Country"
+        },
+        "attributes": {
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "legendStyle": {
+            "width": "15%",
+            "marginLeft": "-15%"
+          },
+          "id": "fail"
+        },
+        "id": "fail-map",
+        "type": "maps/WorldMap"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_ct_iam_top_success_login_region"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Top Success Login by Region"
+        },
+        "attributes": {
+          "style": {
+            "marginLeft": "30px",
+            "width": "33%",
+            "marginRight": "30px"
+          },
+          "id": "topsecreg"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "top-secreg",
+        "type": "List"
+      },
+      {
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_ct_iam_top_failed_login_region"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Top Failed Login by Region"
+        },
+        "attributes": {
+          "style": {
+            "marginRight": "30px",
+            "width": "33%"
+          },
+          "id": "botsecreg"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "botsecreg",
+        "type": "List"
+      },
+      {
+         "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "headers": {
+              "Accept": "application/json;report-format=nested"
+            },
+            "pathParams": {
+              "reportId": "taf_ct_iam_bottom_success_login"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Users with Least Successful Logins"
+        },
+        "attributes": {
+          "style": {
+            "width": "33%",
+            "marginRight": "30px"
+          },
+          "id": "topfail"
+        },
+        "details": {
+          "itemsPerPage": 7
+        },
+        "id": "top-fail",
+        "type": "List"
+      }
+    ]
+  ]
+}

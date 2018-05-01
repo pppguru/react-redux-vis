@@ -1,0 +1,38 @@
+.sidebar {
+  width: 72px;
+  overflow: hidden;
+  transition: width 0.2s;
+
+  .submenu {
+    width: 0px;
+    overflow: hidden;
+    transition: width 0.2s;
+  }
+
+  .has-submenu:hover .submenu {
+    width: 195px;
+    overflow: visible;
+  }
+
+  .submenu__arrow-icon {
+    position: absolute;
+    left: 55px;
+  }
+
+  &:hover {
+    width: 195px;
+    overflow: visible;
+
+    .submenu__arrow-icon {
+      display: none;
+    }
+  }
+}
+
+.search {
+  transition: left 0.2s;
+}
+
+.sidebar:hover + .search {
+  left: 195px !important;
+}

@@ -1,0 +1,58 @@
+{
+  "options": {
+    "itemsPerPage": 5,
+    "rowClickable": true
+  },
+  "data": {
+    "fieldMapping": [
+      {
+        "reportId": "taf_most_used_parent_processes",
+        "columns": [
+          {
+            "data": [
+              {
+                "fieldName": "data.sysmon.ParentImage"
+              }
+            ],
+            "style": {
+              "width": "50%",
+              "wordBreak": "break-all"
+            },
+            "type": "text",
+            "header": "Parent Process"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "count"
+              }
+            ],
+            "chart": {
+              "width": "100%",
+              "height": "120",
+              "type": "area2d",
+              "id": "most-used-parent",
+              "options": {
+                "labelFontSize": "9"
+              }
+            },
+            "style": {
+              "width": "50%"
+            },
+            "type": "chart",
+            "header": "# Launches"
+          }
+        ]
+      }
+    ],
+    "nestedResult": true,
+    "emptyValueMessage": "(Empty)"
+  },
+  "details": {
+    "meta": {
+      "queryParams": {
+        "data.sysmon.ParentImage": "data.sysmon.ParentImage:fieldName"
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "data": {
+    "fieldMapping": [
+      {
+        "reportId": "taf_alert_highpriority",
+        "columns": [
+          {
+            "data": [
+              {
+                "fieldName": "data.rank_alert.score"
+              }
+            ],
+            "style": {
+              "width": "12%"
+            },
+            "type": "scoreWidget",
+            "header": "SCORE"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "date",
+                "displayName": "date"
+              }
+            ],
+            "style": {
+              "width": "10%",
+              "minWidth": "115px"
+            },
+            "type": "text",
+            "header": "DATE"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "data.rank_alert.description"
+              },
+              {
+                "fieldName": "data.rank_alert.message",
+                "displayName": ""
+              }
+            ],
+            "style": {
+              "width": "38%"
+            },
+            "type": "text",
+            "header": "DETAILS"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "source.ip",
+                "displayName": "IP"
+              },
+              {
+                "fieldName": "source.name",
+                "displayName": "Name"
+              },
+              {
+                "fieldName": "source.port",
+                "displayName": "port"
+              },
+              {
+                "fieldName": "source.country",
+                "displayName": "country"
+              },
+              {
+                "fieldName": "source.additionalInfo.user",
+                "displayName": "User"
+              },
+              {
+                "fieldName": "source.additionalInfo.machine",
+                "displayName": "Machine"
+              }
+            ],
+            "style": {
+              "width": "20%"
+            },
+            "type": "text",
+            "header": "SOURCE"
+          },
+          {
+            "data": [
+              {
+                "fieldName": "destination.ip",
+                "displayName": "IP"
+              },
+              {
+                "fieldName": "destination.name",
+                "displayName": "Name"
+              },
+              {
+                "fieldName": "destination.port",
+                "displayName": "port"
+              },
+              {
+                "fieldName": "destination.country",
+                "displayName": "country"
+              },
+              {
+                "fieldName": "destination.additionalInfo.user",
+                "displayName": "User"
+              },
+              {
+                "fieldName": "destination.additionalInfo.machine",
+                "displayName": "Machine"
+              }
+            ],
+            "style": {
+              "width": "20%"
+            },
+            "type": "text",
+            "header": "DESTINATION"
+          }
+        ]
+      }
+    ]
+  },
+  "options": {
+    "filterable": [
+      "DATE",
+      "DETAILS",
+      "SOURCE",
+      "DESTINATION",
+      "C"
+    ],
+    "itemsPerPage": 5,
+    "sortable": [
+      "SCORE",
+      "DATE",
+      "DETAILS",
+      "SOURCE",
+      "DESTINATION"
+    ],
+    "defaultSort": {
+      "column": "SCORE",
+      "direction": "desc"
+    },
+    "rowClickable": true
+  }
+}

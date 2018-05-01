@@ -1,0 +1,509 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": null
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "backgroundColor": "transparent"
+          }
+        },
+        "id": "metricsBar",
+        "type": "MetricsBar",
+        "childrenComponent": [
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_alert_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "1",
+            "type": "MetricsCard",
+            "title": "High Priority Anomalies",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_malware_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#f37133"
+              },
+              "style": {
+                "borderTop": "5px solid #f37133",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "id": "2",
+            "type": "MetricsCard",
+            "title": "High Priority Malware",
+            "clickData": {
+              "tableId": "RecentAnomalies",
+              "filterText": "malware",
+              "page": "/alerts"
+            }
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_event_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_event_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Events Processed"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "3",
+            "type": "MetricsCard",
+            "title": "Events Processed"
+          },
+          {
+            "meta": {
+              "showHeader": false,
+              "api": {
+                "path": "/api/analytics/reporting/execute/{reportId}",
+                "pathParams": {
+                  "reportId": "taf_asset_count_time_shifted"
+                },
+                "queryParams": {
+                  "window": ""
+                }
+              }
+            },
+            "attributes": {
+              "countStyle": {
+                "color": "#03C5ED"
+              },
+              "style": {
+                "borderTop": "5px solid #03C5ED",
+                "marginRight": "1px",
+                "width": "25%"
+              }
+            },
+            "details": {
+              "itemsPerPage": 20,
+              "meta": {
+                "showHeader": true,
+                "showSearch": true,
+                "showBack": true,
+                "showClose": true,
+                "showFullScreen": false,
+                "api": {
+                  "path": "/api/analytics/reporting/details/{reportId}",
+                  "pathParams": {
+                    "reportId": "taf_asset_count_time_shifted"
+                  },
+                  "queryParams": {
+                    "count": 100
+                  }
+                },
+                "title": "Assets Monitored"
+              },
+              "attributes": {
+                "header": {
+                  "titleWrap": {
+                    "alignItems": "center",
+                    "display": "inline-flex"
+                  }
+                },
+                "style": {
+                  "marginLeft": "30px",
+                  "marginRight": "30px",
+                  "marginTop": "30px"
+                }
+              },
+              "id": "details-view"
+            },
+            "id": "4",
+            "type": "MetricsCard",
+            "title": "Assets Monitored"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chartOptions": {
+          "paletteColors": "#adecf9, #03c5ed",
+          "yAxisName": "INCOMING BANDWIDTH",
+          "xAxisName": "TIME",
+          "lineThickness": "2",
+          "drawAnchors": "0",
+          "formatNumberScale": 1,
+          "numberScaleUnit": "KB, MB, GB, TB",
+          "numberScaleValue": "1000, 1000, 1000, 1000",
+          "forceNumberScale": "1"
+        },
+        "chartData": {
+          "fieldMapping": [
+            {
+              "reportId": "taf_stats_histogram",
+              "columns": [
+                "date"
+              ],
+              "axis": "x"
+            },
+            {
+              "seriesname": "Historical Incoming Bandwidth",
+              "reportId": "taf_stats_histogram",
+              "columns": [
+                "bytes_in[1]"
+              ],
+              "renderas": "Area",
+              "axis": "y"
+            },
+            {
+              "seriesname": "Current Incoming Bandwidth",
+              "reportId": "taf_stats_histogram",
+              "columns": [
+                "bytes_in[0]"
+              ],
+              "renderas": "Line",
+              "axis": "y"
+            }
+          ],
+          "combinedResult": true
+        },
+        "meta": {
+          "subTitle": "(in bytes)",
+          "showDetails": false,
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_stats_histogram"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Incoming Bandwidth"
+        },
+        "attributes": {
+          "chartCaption": {
+            "display": "none"
+          },
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "HistogramChart1"
+        },
+        "id": "histogram-chart1",
+        "type": "charts/MultiSeriesCombiChart"
+      },
+      {
+        "chartOptions": {
+          "paletteColors": "#adecf9, #03c5ed",
+          "yAxisName": "OUTGOING BANDWIDTH",
+          "xAxisName": "TIME",
+          "lineThickness": "2",
+          "drawAnchors": "0",
+          "formatNumberScale": 1,
+          "numberScaleUnit": "KB, MB, GB, TB",
+          "numberScaleValue": "1000, 1000, 1000, 1000",
+          "forceNumberScale": "1"
+        },
+        "chartData": {
+          "fieldMapping": [
+            {
+              "reportId": "taf_stats_histogram",
+              "columns": [
+                "date"
+              ],
+              "axis": "x"
+            },
+            {
+              "seriesname": "Historical Outgoing Bandwidth",
+              "reportId": "taf_stats_histogram",
+              "columns": [
+                "bytes_out[1]"
+              ],
+              "renderas": "Area",
+              "axis": "y"
+            },
+            {
+              "seriesname": "Current Outgoing Bandwidth",
+              "reportId": "taf_stats_histogram",
+              "columns": [
+                "bytes_out[0]"
+              ],
+              "renderas": "Line",
+              "axis": "y"
+            }
+          ],
+          "combinedResult": true
+        },
+        "meta": {
+          "subTitle": "(in bytes)",
+          "showHeader": true,
+          "showDetails": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_stats_histogram"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Outgoing Bandwidth"
+        },
+        "attributes": {
+          "chartCaption": {
+            "display": "none"
+          },
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "HistogramChart2"
+        },
+        "id": "histogram-chart2",
+        "type": "charts/MultiSeriesCombiChart"
+      }
+    ],
+    [
+      {
+        "chartOptions": {
+          "paletteColors": "#adecf9, #03c5ed",
+          "yAxisName": "NO. OF CONNECTIONS",
+          "xAxisName": "TIME",
+          "lineThickness": "2",
+          "drawAnchors": "0"
+        },
+        "chartData": {
+          "fieldMapping": [
+            {
+              "reportId": "taf_stats_histogram",
+              "columns": [
+                "date"
+              ],
+              "axis": "x"
+            },
+            {
+              "seriesname": "Historical Connections",
+              "reportId": "taf_stats_histogram",
+              "columns": [
+                "conn[1]"
+              ],
+              "renderas": "Area",
+              "axis": "y"
+            },
+            {
+              "seriesname": "Current Connections",
+              "reportId": "taf_stats_histogram",
+              "columns": [
+                "conn[0]"
+              ],
+              "renderas": "Line",
+              "axis": "y"
+            }
+          ],
+          "combinedResult": true
+        },
+        "meta": {
+          "showHeader": true,
+          "showDetails": false,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_stats_histogram"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "No. of Connections"
+        },
+        "attributes": {
+          "chartCaption": {
+            "display": "none"
+          },
+          "style": {
+            "marginLeft": "30px",
+            "marginRight": "30px",
+            "width": "50%"
+          },
+          "id": "HistogramChart3"
+        },
+        "id": "histogram-chart3",
+        "type": "charts/MultiSeriesCombiChart"
+      },
+      {
+        "chartOptions": {
+          "showValues": "1",
+          "paletteColors": "#03C5ED",
+          "showLabels": "1",
+          "chartRightMargin": "0"
+        },
+        "chart": {
+          "showAnnotations": false
+        },
+        "chartData": {
+          "showTrendLines": false,
+          "fieldMapping": [
+            {
+              "reportId": "taf_connections_by_protocol",
+              "columns": [
+                "protocol.service",
+                "date"
+              ]
+            }
+          ],
+          "multipleReportIds": false
+        },
+        "meta": {
+          "showHeader": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_connections_by_protocol"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Top Connections By Protocol"
+        },
+        "attributes": {
+          "chartCaption": {
+            "display": "none"
+          },
+          "style": {
+            "width": "50%",
+            "marginRight": "30px"
+          },
+          "id": "TopConnectionsByProtocol"
+        },
+        "details": {
+          "meta": {
+            "queryParams": {
+              "protocol.service": {
+                "toolTextIndex": 0,
+                "value": ""
+              }
+            }
+          }
+        },
+        "id": "top-connections-by-protocol",
+        "type": "charts/HorizontalBarChart"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "showDetailsIcon": true,
+          "api": {
+            "path": "/api/analytics/reporting/execute/{reportId}",
+            "pathParams": {
+              "reportId": "taf_top_longest_connections"
+            },
+            "queryParams": {
+              "window": ""
+            }
+          },
+          "title": "Longest Connections"
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          },
+          "id": "LongestConnections"
+        },
+        "details": {
+          "itemsPerPage": 5
+        },
+        "id": "longest-connections",
+        "type": "Reactable"
+      }
+    ]
+  ]
+}

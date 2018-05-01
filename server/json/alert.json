@@ -1,0 +1,106 @@
+{
+  "layout": [
+    [
+      {
+        "meta": {
+          "showHeader": true,
+          "showRefresh": false,
+          "showBackButton": true,
+          "showFullScreen": false,
+          "api": {
+            "path": "/api/alert/{alertId}",
+            "pathParams": {
+              "alertId": ":pathParam"
+            },
+            "queryParams": {
+              "date": "date:pathParam",
+              "window": ""
+            }
+          },
+          "title": "Anomaly Details"
+        },
+        "attributes": {
+          "style": {
+            "backgroundColor": "#ffffff",
+            "width": "250px",
+            "marginTop": "30px",
+            "marginLeft": "30px",
+            "flex": "0 0 250px"
+          }
+        },
+        "id": "alert-detail",
+        "type": "AlertDetails"
+      },
+      {
+        "meta": {
+          "showHeader": false,
+          "showFullScreen": false,
+          "api": {
+            "path": "/api/analytics/graph/{alertId}",
+            "pathParams": {
+              "alertId": ":pathParam"
+            },
+            "queryParams": {
+              "date": "date:pathParam",
+              "window": ""
+            }
+          },
+          "title": "Overview"
+        },
+        "attributes": {
+          "header": {
+            "style": {
+              "paddingTop": "18px",
+              "paddingBottom": "18px",
+              "paddingLeft": "20px",
+              "paddingRight": "80px",
+              "backgroundColor": "rgba(255, 255, 255, 0.75)"
+            }
+          },
+          "style": {
+            "width": "100%",
+            "marginTop": "30px",
+            "marginRight": "30px",
+            "backgroundSize": "20px 20px",
+            "backgroundImage": "linear-gradient(to right, #F1F1F3 1px, transparent 1px), linear-gradient(to bottom, #F1F1F3 1px, #FAFAFB 1px)",
+            "padding" : "0px"
+          },
+          "canvasStyle": {
+            "height": "95%",
+            "width": "100%"
+          },
+          "id": "NetworkGraph"
+        },
+        "id": "network-graph",
+        "type": "networkGraph/index",
+        "timelineId": "primary-timeline"
+      }
+    ],
+    [
+      {
+        "meta": {
+          "showHeader": false,
+          "api": {
+            "path": "/api/alert/{alertId}",
+            "pathParams": {
+              "alertId": ":pathParam"
+            },
+            "queryParams": {
+              "date": "date:pathParam",
+              "window": ""
+            }
+          }
+        },
+        "attributes": {
+          "style": {
+            "width": "100%",
+            "marginLeft": "30px",
+            "marginRight": "30px"
+          }
+        },
+        "id": "alert-timeline",
+        "type": "AlertTimeline"
+      }
+    ]
+  ]
+}

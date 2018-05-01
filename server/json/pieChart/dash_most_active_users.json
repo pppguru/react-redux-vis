@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "api": {
+      "reportId": "taf_s3_requester,taf_s3_most_active_requester,taf_s3_total"
+    }
+  },
+  "chart": {
+    "options": {},
+    "data": {
+      "fieldMapping": [
+        {
+          "reportId": "taf_s3_requester",
+          "columns": [
+            {
+              "name": "data.aws.userArn",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "countValue"
+        },
+        {
+          "reportId": "taf_s3_total",
+          "columns": [
+            {
+              "name": "date",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "totalValue"
+        },
+        {
+          "reportId": "taf_s3_most_active_requester",
+          "columns": [
+            {
+              "name": "date",
+              "type": "name"
+            }
+          ],
+          "returnValueIs": "topValue"
+        }
+      ]
+    },
+    "legends": {
+      "title": [
+        "Events",
+        "Users"
+      ],
+      "label": "Caused by"
+    }
+  }
+}
